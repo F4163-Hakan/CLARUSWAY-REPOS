@@ -74,3 +74,57 @@ const esitMi = (str1, str2) =>
 
 console.log(esitMi("MerHaba", "MERHABA"));
 console.log(esitMi("Hello", "Hell"));
+
+//* ----------------------------------------------------------
+//* localeCompare()
+//* ----------------------------------------------------------
+const a = "réservé"; // with accents, lowercase
+const b = "RESERVE"; // no accents, uppercase
+console.log(a.localeCompare(b, "en", { sensitivity: "base" }));
+
+//? 'BASE: a ≠ b, a = á, a = A'
+//? 'ACCENT: a ≠ b, a ≠ á, a = A'
+//? 'CASE: a ≠ b, a = á, a ≠ A'
+
+//* ----------------------------------------------------------
+//* charAt()
+//* ----------------------------------------------------------
+const str6 = "Full Stack Path and DS path";
+console.log(str6.charAt(5)); //* S
+console.log(str6.charAt(4)); //* " "
+console.log(str6.charAt()); //* F (ilk indistekini dondurur)
+console.log(str6.charAt(14)); //* h
+
+//! lenght bir property (objenin degiskenidir) dir ve string'in
+//! karakter sayisini tutar.
+console.log(str6.length); //* 27
+
+//* String son harfini ogrenmek istersek
+console.log(str6.charAt(str6.length - 1)); //* 0 -26 => 27 eleman
+
+//* ----------------------------------------------------------
+//* includes() - case sentive
+//* ----------------------------------------------------------
+const word = "To be or not to be, that is the question";
+
+console.log(word.includes("to be")); //? true
+console.log(word.includes("That")); //? false
+console.log(word.includes("")); //? true
+console.log(word.includes("to be", 14)); //? false
+console.log(word.includes("to be", 13)); //? true
+
+//! NOT: case insentive kullanmak icin str baslangicta kucuk veya
+//! buyuk harfe cevirilerek arama yapilabilir.
+//* ----------------------------------------------------------
+//* indexOf() , lastIndexOf() - case sensitive
+//* ----------------------------------------------------------
+
+const toBe = word.indexOf("or");
+console.log(toBe); //? 6
+console.log(word.indexOf("be")); //? 3
+console.log(word.lastIndexOf("be")); //? 16
+console.log(word.lastIndexOf("BE")); //? -1
+
+//* ----------------------------------------------------------
+//* search()
+//* ----------------------------------------------------------

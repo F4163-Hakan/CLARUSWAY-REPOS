@@ -129,7 +129,7 @@ console.log(word.lastIndexOf("BE")); //? -1
 //* search()
 //* ----------------------------------------------------------
 
-const buyukHarf = /[A-Za-z]/;
+const buyukHarf = /[A-Z]/;
 const nokta = /[.]/;
 const virgul = /[,]/;
 console.log(word.search(buyukHarf)); //? ilk buyuk harfin indeksi 0

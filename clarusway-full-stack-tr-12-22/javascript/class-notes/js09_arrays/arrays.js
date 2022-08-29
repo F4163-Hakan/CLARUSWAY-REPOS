@@ -51,4 +51,4 @@ isimler[1] = "Saffet";
 console.log(isimler);
 
 //!Uncaught TypeError: Assignment to constant variable.
-isimler = ["Ali", "Veli"];
+// isimler = ["Ali", "Veli"];

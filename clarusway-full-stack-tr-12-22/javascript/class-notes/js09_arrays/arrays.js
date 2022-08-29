@@ -138,20 +138,14 @@ console.log(array1);
 //? ===========================================================
 //?  DIZI ERISIM METOTLARI
 //? ===========================================================
-const sayilar1 = [3, 5, 2, "2", "uc", 2, "3", "bes", "5"];
+const sayilar1 = [3, 5, 2, "2", "üc", 2, "bes", 5];
 
 //* includes()
 //*-----------------------------------------------------------
-console.log(sayilar1.includes(5)); //? true
-console.log(sayilar1.includes("5")); //? false
 
-//* indexOf(), lastIndexOf();
+//* indexOf(),  lastIndexOf();
 //*-----------------------------------------------------------
 //* ilk eslesen indeksi dondurur.
-
-console.log(sayilar1.indexOf(2)); //? 2
-console.log(sayilar1.lastIndexOf(2)); //? 5
-console.log(sayilar1.lastIndexOf(4)); //? -1
 
 //! Odev: prompt ile konsoldan bir sayi istenmeli (string veya number
 //! olarak) eger bu girilen sayi, dizi icerisinde bulunuyorsa indisi
@@ -162,36 +156,17 @@ console.log(sayilar1.lastIndexOf(4)); //? -1
 //* join()
 //*-----------------------------------------------------------
 //? join, dizinin elamanlari birlestirip string hale cevirir.
-console.log(sayilar1.join(" "));
-console.log(sayilar1.join()); // 3,5...
-console.log(sayilar1);
 
 //* toString()
 //*-----------------------------------------------------------
 //? toString fonksiyonu sadece dizinin elemanlarinin aralarina
 //? (virgul) koyarak birlestirir ve string yapar.
-console.log(sayilar1.toString());
 
 //* slice()
 //*-----------------------------------------------------------
-const arabalar1 = ["BMW", "Mercedes", "Fiat", "Anadol"];
-const yeniArabalar = arabalar1.slice(2);
-console.log(yeniArabalar, arabalar1);
-
-const yeniArabalar1 = arabalar1.slice(1, 3);
-console.log(yeniArabalar1);
 
 //* concat()
 //*-----------------------------------------------------------
-const yazilar = ["Bugun", "hava", "cok", "guzel"];
-const numbersArr = [1, 2, 5, 7];
-const combinedArr = yazilar.concat(
-  true,
-  numbersArr,
-  ["aslinda", "cok", "sicak"],
-  [["x", "y"]]
-);
-console.log(combinedArr);
 
 //* every()
 //*-----------------------------------------------------------

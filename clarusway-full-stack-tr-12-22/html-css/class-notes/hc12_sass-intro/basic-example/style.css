@@ -1,17 +1,67 @@
-/* Error: expected ";".
- *    ,
- * 21 | body {
- *    |      ^
- *    '
- *   style.scss 21:6  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected ";".\a    \2577 \a 21 \2502  body {\a    \2502       ^\a    \2575 \a   style.scss 21:6  root stylesheet';
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: pink;
+  font-size: 1.2rem;
+  color: white;
+}
+
+header {
+  background-color: #30a7c3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+header img {
+  width: 80px;
+  border: 2px solid brown;
+  border-radius: 10px;
+}
+header ul {
+  list-style-type: none;
+}
+header ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+header ul li:hover {
+  text-decoration: underline;
+}
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hotpink;
+  padding: 1rem;
+  line-height: 2rem;
+}
+.banner aside button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #30a7c3;
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+}
+.banner aside button:hover {
+  background-color: pink;
+  cursor: pointer;
+}
+.banner img {
+  width: 30%;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -2,8 +2,10 @@
 //* STYLE:SCSS
 //********************************************/
 
+@use "./base/reset";
 @use "./abstracts/variables" as v;
 // @import "./abstracts/colors";
+@use "./components/index" as *;
 
 body {
   font-family: v.$fontFamily;

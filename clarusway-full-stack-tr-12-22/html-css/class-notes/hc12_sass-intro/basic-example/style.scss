@@ -10,7 +10,7 @@
 $bgColor: pink;
 $fontSize: 1.2rem;
 $fontColor: white;
-$navBgColor: #30A7C3;
+$navBgColor: #30a7c3;
 $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $bannerBgColor: hotpink;
 $myBorder: 2px solid brown;
@@ -120,3 +120,40 @@ header {
 //*****************
 //! @EXTEND
 //*****************
+
+.articles {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  .article1 {
+    background-color: grey;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 10rem;
+  }
+
+  .article2 {
+    @extend .article1;
+    background-color: hotpink;
+    border-color: green;
+  }
+}
+
+//*******  FOOTER *********/
+$textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
+footer {
+  .social-icons {
+    display: flex;
+    height: 10rem;
+
+    @for $i from 1 through 5 {
+      .social#{$i} {
+        width: 20%;
+        background-color: lighten(rgba(27, 130, 219, 0.89), $i * 5);
+        font-size: $i * 1rem;
+        color: nth($textColor, $i);
+      }
+    }
+  }
+}

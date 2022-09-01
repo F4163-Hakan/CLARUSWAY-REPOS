@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: #30A7C3;
+  background-color: #30a7c3;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +50,7 @@ header a {
   padding: 0.5rem;
   border: none;
   border-radius: 5px;
-  background-color: #30A7C3;
+  background-color: #30a7c3;
   margin-top: 1rem;
   margin-right: 0.5rem;
 }
@@ -100,6 +100,58 @@ header a {
   height: 15rem;
   border: 2px solid brown;
   border-radius: 5px;
+}
+
+.articles {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.articles .article1, .articles .article2 {
+  background-color: grey;
+  width: 50%;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 10rem;
+}
+.articles .article2 {
+  background-color: hotpink;
+  border-color: green;
+}
+
+footer .social-icons {
+  display: flex;
+  height: 10rem;
+}
+footer .social-icons .social1 {
+  width: 20%;
+  background-color: rgba(43, 143, 229, 0.89);
+  font-size: 1rem;
+  color: #990000;
+}
+footer .social-icons .social2 {
+  width: 20%;
+  background-color: rgba(65, 155, 232, 0.89);
+  font-size: 2rem;
+  color: #55004e;
+}
+footer .social-icons .social3 {
+  width: 20%;
+  background-color: rgba(88, 167, 234, 0.89);
+  font-size: 3rem;
+  color: #0fa8a1;
+}
+footer .social-icons .social4 {
+  width: 20%;
+  background-color: rgba(111, 179, 237, 0.89);
+  font-size: 4rem;
+  color: #121456;
+}
+footer .social-icons .social5 {
+  width: 20%;
+  background-color: rgba(133, 191, 240, 0.89);
+  font-size: 5rem;
+  color: #64c217;
 }
 
 /*# sourceMappingURL=style.css.map */

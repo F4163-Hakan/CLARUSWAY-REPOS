@@ -1,14 +1,17 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Error: expected ";".
+ *    ,
+ * 21 | body {
+ *    |      ^
+ *    '
+ *   style.scss 21:6  root stylesheet */
 
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: pink;
-  font-size: 1.2rem;
-  color: white;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected ";".\a    \2577 \a 21 \2502  body {\a    \2502       ^\a    \2575 \a   style.scss 21:6  root stylesheet';
 }
-
-/*# sourceMappingURL=style.css.map */

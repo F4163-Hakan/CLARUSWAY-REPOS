@@ -13,6 +13,7 @@ $fontColor: white;
 $navBgColor: #30a7c3;
 $fontFamily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 $bannerBgColor: hotpink;
+$myBorder: 
 
 //********************************************/
 //* Variable Usage
@@ -22,4 +23,30 @@ body {
   background-color: $bgColor;
   font-size: $fontSize;
   color: $fontColor;
+}
+
+//*******  HEADER *********/
+header {
+  background-color: $navBgColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    width: 80px;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 0.5rem;
+      //! içinde bulundğumuz elementi refere etmek için & işareti kullanılır.
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  a {
+    color: $fontColor;
+    text-decoration: none;
+  }
 }

@@ -141,11 +141,32 @@ header {
 }
 
 //*******  FOOTER *********/
-$textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
+
+//*************************
+//! FOR LOOP
+//*************************
+
+//***********************************************
+//! IF-ELSE
+//************************************************
+
 footer {
+  $dark: 4;
+
+  p {
+    @if $dark==1 {
+      background-color: grey;
+    } @else if $dark==2 {
+      background-color: lightgreen;
+    } @else {
+      background-color: lightsalmon;
+    }
+  }
+
   .social-icons {
     display: flex;
     height: 10rem;
+    $textColor: #990000, #55004e, #0fa8a1, #121456, #64c217;
 
     @for $i from 1 through 5 {
       .social#{$i} {

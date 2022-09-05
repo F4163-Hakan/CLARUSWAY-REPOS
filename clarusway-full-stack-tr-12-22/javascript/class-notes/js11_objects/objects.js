@@ -128,3 +128,30 @@ console.log("DOB:", personal.calculateAge());
 //! olarak kullanilirsa, this kelimesi global scope'u (window nesnesini)
 //! gösterir. Bunu engellemek için object fonksiyonlarini tanimlarken
 //! diger (func. expression veya declaration) yontemlerini kullanabilir.
+
+// * ======================================================
+// *                  OBJECT ITERATION
+// * ======================================================
+
+
+//? nested
+const people = {
+  person1: {
+    name: "Can",
+    surname: "Canan",
+    dob: "1990",
+    job: "developer",
+    salary: "140000",
+    drivingLicense: true,
+  },
+  person2: {
+    name: "John",
+    surname: "Sweet",
+    dob: "1990",
+    job: "tester",
+    salary: "110000",
+    drivingLicense: false,
+  },
+};
+
+console.log(people);

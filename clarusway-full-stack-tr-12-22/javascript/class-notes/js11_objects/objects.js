@@ -52,3 +52,21 @@ console.log("MODEL:", arabalar["model"]); //? Square bracket notation
 //? degisken olarak kullanabilmemizdir.
 const key = "marka";
 console.log(arabalar[key]);
+/* ---------------------------------------------------------
+//* 2- object constructor'i kullanarak (OOP ile ayrintilandirilacak)
+//* ---------------------------------------------------------
+
+//? Object Constructure
+function Personel(id, ad, maas) {
+  this.id = id;
+  this.ad = ad;
+  this.maas = maas;
+  // console.log(this);
+}
+
+const kisi1 = new Personel("1234567890", "Mustafa", 15000);
+const kisi2 = new Personel("177567890", "Canan", 25000);
+// console.log(kisi1);
+console.log(kisi1.ad);
+console.log(kisi2.maas);
+console.log(kisi2["id"]);

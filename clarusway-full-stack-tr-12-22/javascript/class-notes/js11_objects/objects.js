@@ -1,24 +1,3 @@
-// const salaries = [5500, 8000, 6500, 9000, 10000, 15000, 25000];
-
-const sumOfSalaries = salaries.reduce((acc, val, i) => acc + val, 0);
-
-console.log("SUM:", sumOfSalaries);
-
-//? Ornek: Bir Firma, 9000 TL den az olan maaşlara %10 zam yapmak istiyor
-//? ve zam yapılan bu kişilere toplam kaç TL ödeneceğini bilmek istiyor.
-//? İlgili programı yazınız.
-
-const sumOfRaisedSalaries = salaries
-  .filter((sal) => sal <= 9000)
-  .map((sal) => Math.trunc(sal * 1.1))
-  .reduce((acc, salary) => acc + salary, 0);
-
-console.log("Sum Of Raised Salaries:", sumOfRaisedSalaries);
-
-
-
-
-
 //* ===================================================
 //*                 (OBJECTS)
 //* ===================================================
@@ -45,31 +24,99 @@ arabalar.lpg = true;
 console.log(arabalar);
 
 //!Read
-console.log(arabalar.lpg); //? .notation
-console.log("MODEL:", arabalar["model"]); //? Square bracket notation
+// console.log(arabalar.lpg); //? .notation
+// console.log("MODEL:", arabalar["model"]); //? Square bracket notation
 
-//? Square bracket yonteminin en buyuk avantaji key degerini
-//? degisken olarak kullanabilmemizdir.
-const key = "marka";
-console.log(arabalar[key]);
+// //? Square bracket yonteminin en buyuk avantaji key degerini
+// //? degisken olarak kullanabilmemizdir.
+// const key = "mark";
+// console.log(arabalar[key]);
 
+// arabalar.motor = "1.6";
+// console.log(arabalar);
 
+// //* ---------------------------------------------------------
+// //* 2- object constructor'i kullanarak (OOP ile ayrintilandirilacak)
+// //* ---------------------------------------------------------
 
-/* ---------------------------------------------------------
-//* 2- object constructor'i kullanarak (OOP ile ayrintilandirilacak)
+// //? Object Constructure
+// function Personel(id, ad, maas) {
+//   this.id = id;
+//   this.ad = ad;
+//   this.maas = maas;
+//   // console.log(this); //! Personel objesine baglanmistir (binded)
+// }
+
+// const kisi1 = new Personel("1234567890", "Mustafa", 15000);
+// const kisi2 = new Personel("177567890", "Canan", 25000);
+// // console.log(kisi1);
+// console.log(kisi1.ad);
+// console.log(kisi2.maas);
+// console.log(kisi2["id"]);
+
+// //? Global alanda window objesini gosterir.
+// console.log(this);
+// window.alert("Merhaba");
+
+//* ---------------------------------------------------------
+//* 3- Object literal (En cok tercih edilen yontem)
 //* ---------------------------------------------------------
 
-//? Object Constructure
-function Personel(id, ad, maas) {
-  this.id = id;
-  this.ad = ad;
-  this.maas = maas;
-  // console.log(this);
-}
+const worker = {
+  name: "Can",
+  surname: "Canan",
+  age: 33,
+  job: "developer",
+  languages: ["C++", "Java", "Javacript", "Pyhton", "Go"],
+  salary: "140000",
+};
+console.log(worker);
 
-const kisi1 = new Personel("1234567890", "Mustafa", 15000);
-const kisi2 = new Personel("177567890", "Canan", 25000);
-// console.log(kisi1);
-console.log(kisi1.ad);
-console.log(kisi2.maas);
-console.log(kisi2["id"]);
+console.log("JOB:", worker.job);
+console.log("Lang:", worker["languages"]);
+
+console.log(worker.languages[2]);
+
+worker["languages"].forEach((l) => console.log(l));
+
+worker.dob = "1990";
+worker.email = "can@gmail.com";
+console.log(worker);
+
+// worker["salary"] = worker["salary"] * 1.1;
+worker["salary"] *= 1.1;
+console.log(worker);
+
+//* Object Copy
+const person = worker; //! Shallow (Sig - Sığ) Copying
+console.log("PERSON:", person);
+
+//! Object.create(), Object.assign(), spread (...), concat() , slice() -> Shallow Copying
+
+person.dob = 2000;
+console.log("PERSON:", person);
+
+//! Deep Copy
+let deepCopyOfWorker = JSON.parse(JSON.stringify(worker));
+// console.log(JSON.stringify(worker));
+
+deepCopyOfWorker.dob = "2022";
+console.log("DEEP:", deepCopyOfWorker);
+
+//* ======================================================
+//*              Object Metotlari
+//* ======================================================
+
+const personal = {
+  name: "Can",
+  surname: "Canan",
+  dob: "1990",
+  job: "developer",
+  salary: "140000",
+  drivingLicense: true,
+  calculateAge: function () {
+    return new Date().getFullYear() - this.dob;
+  },
+};
+
+console.log("DOB:", personal.calculateAge());

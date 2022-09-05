@@ -156,12 +156,28 @@ const people = {
 
 console.log(people);
 
+//? Javascript'de Objeler default olarak iterable degildir.
+//? Ama for in ve for of donguleri ile itere edilebilirler.
+
+//? Objelerin key ve value'larini okumak icin built-in metotlar vardir.
+//? Bu mettotlar aslinda objelerin key ve/veya value'lari bir dizi olarak dondurur.
+console.log(Object.keys(people));
+
 //! FOR - IN
 //* for (key in object) {
 //*   // code block to be executed
 //* }
 
-for (let kisi in kisilerObject) {
-  console.log(kisi);
-  console.log(kisilerObject[kisi]);
+for (let person in people) {
+  console.log(person);
+  console.log(people[person]);
 }
+
+//! FOR - OF
+//* for (x of iterable) {
+//*   code block to be executed
+//* }
+
+// for (let person of people) {
+//   console.log(person);
+// }

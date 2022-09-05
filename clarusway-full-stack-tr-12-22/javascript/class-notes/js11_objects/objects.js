@@ -155,3 +155,13 @@ const people = {
 };
 
 console.log(people);
+
+//! FOR - IN
+//* for (key in object) {
+//*   // code block to be executed
+//* }
+
+for (let kisi in kisilerObject) {
+  console.log(kisi);
+  console.log(kisilerObject[kisi]);
+}

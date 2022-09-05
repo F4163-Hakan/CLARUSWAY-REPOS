@@ -120,3 +120,11 @@ const personal = {
 };
 
 console.log("DOB:", personal.calculateAge());
+
+//! NOT: arrow fonksiyonlari ozellikle callback fonksiyonu olarak
+//! kullanilmak ve bu fonksiyonlarda this keyword kullanim
+//! gereksinimini kaldirmak icin gelistirilmistir.
+//! Lexical context'e sahiptirler.Dolayisiyla, bir obje fonksiyonu
+//! olarak kullanilirsa, this kelimesi global scope'u (window nesnesini)
+//! gösterir. Bunu engellemek için object fonksiyonlarini tanimlarken
+//! diger (func. expression veya declaration) yontemlerini kullanabilir.

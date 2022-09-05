@@ -19,7 +19,6 @@ console.log("Sum Of Raised Salaries:", sumOfRaisedSalaries);
 
 
 
-
 //* ===================================================
 //*                 (OBJECTS)
 //* ===================================================
@@ -32,3 +31,24 @@ console.log("Sum Of Raised Salaries:", sumOfRaisedSalaries);
 //? Herhangi bir veriyi erismek icin property (key) adi kullanilir.
 
 console.log("******* Objects *********");
+
+//! 3 farkli yontem ile Object olusturulabilir
+//* ---------------------------------------------------------
+//* 1- Object() class'ından new Operatörü ile
+//* ---------------------------------------------------------
+
+const arabalar = new Object();
+arabalar.marka = "BMW";
+arabalar.motor = "1.3";
+arabalar.model = 2022;
+arabalar.lpg = true;
+console.log(arabalar);
+
+//!Read
+console.log(arabalar.lpg); //? .notation
+console.log("MODEL:", arabalar["model"]); //? Square bracket notation
+
+//? Square bracket yonteminin en buyuk avantaji key degerini
+//? degisken olarak kullanabilmemizdir.
+const key = "marka";
+console.log(arabalar[key]);

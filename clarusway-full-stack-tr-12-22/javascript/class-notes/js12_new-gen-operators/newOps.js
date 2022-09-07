@@ -157,7 +157,11 @@ const sumAll = (...numbers) => {
 
 console.log("SUM OF NUMBERS:", sumAll(1, 2, 3, 4, 5, 6));
 
-const showName = () => {};
+const showName = (name, surname, ...titles) => {
+  console.log(titles);
+  const summary = `${name} ${surname} is a ${titles.join(" and ")}`;
+  console.log(summary);
+};
 
 showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 

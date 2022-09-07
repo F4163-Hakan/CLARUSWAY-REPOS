@@ -8,4 +8,6 @@ List of coding challenges within JavaScript workshop as follows;
 
 - [JS - CC03 - Merge Arrays](./CC-03/README.md)
 
+- [JS - CC04 - Roman Numerals](./CC-04/README.md)
+
 

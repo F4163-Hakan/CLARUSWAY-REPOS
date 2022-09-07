@@ -246,3 +246,10 @@ const ages = team.map((p) => p.age + 1);
 //* Ornek3: name ve surname'leri birlestirip buyuk harfe ceviren ve
 //* bunu fullName key'i olarak saklayan, ayni zamanda age degerlerini 5
 //* arttirarak age key'ine saklayan ve olusan diziyi donduren kodu yazınız.
+
+const teamFullName = team.map((p) => ({
+  fullName: p.name.toUpperCase() + " " + p.surname.toUpperCase(),
+  age: p.age + 5,
+}));
+
+console.log(teamFullName);

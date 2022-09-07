@@ -81,13 +81,85 @@ team.forEach((p) => {
   console.log("Age:", age);
 });
 
+//* functionund dondurdugu obje dogrudan dest. yapilabilir
+const getInfo = () => {
+  return {
+    id: 1,
+    productName: "Iphone",
+    price: 30000,
+  };
+};
+
+console.log(getInfo());
+const { productName, price } = getInfo();
+console.log("Product Name:", productName);
+console.log("Product Price:", price);
+
+//? Fonksyionlarin obje parametreleri dogrudan dest. yapilabilir.
+const calculate = ({ id, price }) => {
+  console.log(price * 1.1);
+};
+
+calculate({ id: 1, price: 3000 });
+
 //* ======================================================
 //*  DESTRUCTURING (ARRAY)
 //* ======================================================
+const names = ["Ahmet", "Mehmet", "İsmet", "Saffet"];
+
+//*Classical
+const mehmet = names[1]; //* indexing
+
+const [p1, p2, , p4] = names;
+console.log(p1, p2, p4);
 
 //*======================================================
 //*  REST (...)
 //* ======================================================
+
+//? REST operatoru kullanici tarafindan girilen degerleri dizi
+//? icerisine konumlandirir. Cesitli kullanim alanlari vardir.
+
+//! 1- Bir dizi veya object'deki bazi degerlerden geri kalanlarini
+//!    ayri dizi yada objelere kopyalanmasini saglayabilir.
+
+//* REST: (Arrays)
+const autos = ["anadol", "reno", "bmw", "mercedes", "ferrari"];
+
+const [anadol, reno, ...restAutos] = autos;
+console.log(anadol, reno);
+console.log(restAutos);
+
+//* REST (Objects)
+const personel = {
+  pName: "john",
+  surname: "smith",
+  job: "developer",
+  age: 30,
+};
+
+const { pName, job, ...ageSurname } = personel;
+
+console.log(ageSurname);
+console.log(pName, job);
+
+//! 2- Bir fonksiyonun argumanlarini diziye cevirmek icin kullanilabilir.
+
+const sum = (x, y) => x + y;
+
+//? hata vermez fakat sadece 2 argumani toplar
+console.log(sum(1, 2, 3, 4, 5, 6));
+
+const sumAll = (...numbers) => {
+  console.log(numbers); //? (4) [1, 2, 3, 4]
+  return numbers.reduce((s, n) => (s += n), 0);
+};
+
+console.log("SUM OF NUMBERS:", sumAll(1, 2, 3, 4, 5, 6));
+
+const showName = () => {};
+
+showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 
 //*======================================================
 //*  SPREAD (...)

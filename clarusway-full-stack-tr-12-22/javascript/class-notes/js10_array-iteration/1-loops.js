@@ -51,22 +51,22 @@ console.log("ORTALAMA:", toplam / notlar.length);
 
 const students = ["ahmet", "mehmet", "ismet", "ahmet", "can", "mehmet", "cem"];
 
-// const findStudents = (arr, search) => {
-//   let counter = 0;
-//   for (let i in arr) {
-//     if (search === arr[i]) {
-//       counter++;
-//     }
-//   }
-//   if (!counter) {
-//     return `${search} can not be found`;
-//   } else {
-//     return `${search} found ${counter} times`;
-//   }
-// };
+const findStudents = (arr, search) => {
+  let counter = 0;
+  for (let i in arr) {
+    if (search === arr[i]) {
+      counter++;
+    }
+  }
+  if (!counter) {
+    return `${search} can not be found`;
+  } else {
+    return `${search} found ${counter} times`;
+  }
+};
 
-// const name = prompt("Please enter a name").toLowerCase();
-// console.log(findStudents(students, name));
+const name = prompt("Please enter a name").toLowerCase();
+console.log(findStudents(students, name));
 
 //* ======================================================
 //*                   FOR-OF LOOP
@@ -86,7 +86,7 @@ const findStudentsOf = (arr, search) => {
     search === item && counter++;
 
     //! Short-circuit yöntemi: || => kosul yanlis (false) ise ifadeyi çalıştır.
-    search === item || counter++;
+    // search === item || counter++;
   }
 
   return !counter

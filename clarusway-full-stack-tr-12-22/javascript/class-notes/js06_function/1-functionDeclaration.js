@@ -64,5 +64,3 @@ console.log(tekCift(2));
 //*****************************************************/
 const n = +prompt("Bir sayi giriniz:");
 console.log(tekCift(n));
-
-

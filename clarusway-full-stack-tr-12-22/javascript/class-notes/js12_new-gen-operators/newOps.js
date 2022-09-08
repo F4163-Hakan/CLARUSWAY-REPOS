@@ -168,3 +168,9 @@ showName("Noah", "Adams", "Developer", "Instr", "Professor", "Dad");
 //*======================================================
 //*  SPREAD (...)
 //* ======================================================
+
+//? Spread operatoru ise iterables olan bir elemani bireysel
+//? degerler haline getirir.
+
+const flyingVecihles = ["Aircraft", "Helicopter", "QuadCopter"];
+const automobiles = ["Truck", "Bus", "Car", "SUV"];

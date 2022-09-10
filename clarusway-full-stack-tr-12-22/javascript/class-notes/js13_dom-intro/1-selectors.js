@@ -70,8 +70,6 @@ myListArray.forEach((item) => console.log(item.innerText));
 
 [...myList].forEach((item) => (item.style.color = "red"));
 
-
-
 //* ========================================
 //*              QUERYSELECTOR()
 //* ========================================
@@ -93,3 +91,13 @@ console.log(input.value);
 document.querySelector("#btn").style.cursor = "pointer";
 
 //? 4- queryselector() ile CSS deki gibi secim yapilabilir.
+
+const itemH2 = document.querySelector(".item-list h2");
+itemH2.style.color = "purple";
+
+const myBtn = document.querySelector("input[type='button']");
+console.log(myBtn);
+
+//* ========================================
+//*              QUERYSELECTORALL()
+//* ========================================

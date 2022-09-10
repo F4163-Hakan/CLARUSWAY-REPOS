@@ -70,6 +70,26 @@ myListArray.forEach((item) => console.log(item.innerText));
 
 [...myList].forEach((item) => (item.style.color = "red"));
 
+
+
 //* ========================================
 //*              QUERYSELECTOR()
 //* ========================================
+
+//? 1- queryselector() etiket secebilir.
+const myLi = document.querySelector("li");
+console.log(myLi.innerText);
+myLi.style.color = "yellowgreen";
+
+//? 2- queryselector() class secebilir.
+
+const itemList = document.querySelector(".item-list");
+itemList.style.background = "grey";
+
+//? 3- queryselector() id secebilir.
+const input = document.querySelector("#input");
+console.log(input.value);
+
+document.querySelector("#btn").style.cursor = "pointer";
+
+//? 4- queryselector() ile CSS deki gibi secim yapilabilir.

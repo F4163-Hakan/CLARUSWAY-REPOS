@@ -22,6 +22,6 @@ newP.classList.add("new-class");
 console.log(newP);
 newP.classList.remove("new-class");
 
-//? INNER HTML (Ciddi Guenlik aciklari var)
+//? INNER HTML (Ciddi Guvenlik aciklari var)
 const ul = document.querySelector("ul");
 ul.innerHTML += `<li id="list-id" class="list">Boostrap</li>`;

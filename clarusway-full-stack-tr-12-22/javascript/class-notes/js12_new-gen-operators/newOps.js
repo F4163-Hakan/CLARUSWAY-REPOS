@@ -50,8 +50,8 @@ const team = [
     age: 30,
   },
   {
-    name: "Josh",
-    surname: "Barry",
+    name: "Can",
+    surname: "naber",
     job: "tester",
     age: 45,
   },

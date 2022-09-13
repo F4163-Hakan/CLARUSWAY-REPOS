@@ -72,6 +72,22 @@ document.querySelector(".again-btn").addEventListener("click", () => {
   document.querySelector(".msg").innerText = `Starting..`;
 });
 
+document.querySelector(".guess-input").addEventListener("keydown", (e) => {
+  if (e.code === "Enter") {
+    document.querySelector(".check-btn").click();
+  }
+});
+
+//! LOCALSTORAGE- SESSIONSTORAGE
+// myObj = { a: 1, b: 2, c: 3 };
+// localStorage.setItem("OBJ", JSON.stringify(myObj));
+// const readObj = localStorage.getItem("OBJ");
+// const readOBJ = JSON.parse(localStorage.getItem("OBJ"));
+// console.log(typeof readObj);
+// console.log(typeof readOBJ);
+// console.log(readOBJ);
+
+//* PUSEDUO
 //? eger score > topScore
 //?     topScore = score
 //? secret_number = gorunur.
@@ -87,12 +103,3 @@ document.querySelector(".again-btn").addEventListener("click", () => {
 //? Uzgunuz kaybetiniz.
 
 //* againBtn basildiginda kontrolleri yap
-
-//! LOCALSTORAGE- SESSIONSTORAGE
-// myObj = { a: 1, b: 2, c: 3 };
-// localStorage.setItem("OBJ", JSON.stringify(myObj));
-// const readObj = localStorage.getItem("OBJ");
-// const readOBJ = JSON.parse(localStorage.getItem("OBJ"));
-// console.log(typeof readObj);
-// console.log(typeof readOBJ);
-// console.log(readOBJ);

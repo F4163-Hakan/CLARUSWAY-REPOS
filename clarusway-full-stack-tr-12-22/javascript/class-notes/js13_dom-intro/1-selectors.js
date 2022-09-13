@@ -58,7 +58,7 @@ const myList = document.getElementsByClassName("list");
 console.log(myList); //? HTML Collection
 console.log(myList[0].innerText);
 
-//? HTML Collection'larda Dizi metotlari dogrudan kullanilamaz.
+//? HRML Collection'larda Dizi metotlari dogrudan kullanilamaz.
 //? Spread ve Array.from() ile kullanilabilri hale gelir.
 
 //?Array.from()

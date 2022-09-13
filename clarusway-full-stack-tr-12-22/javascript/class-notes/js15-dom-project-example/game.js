@@ -12,6 +12,7 @@ let score = 10;
 let topScore = 0;
 
 //* CheckBtn basildiginda kontrolleri yap
+
 document.querySelector(".check-btn").addEventListener("click", () => {
   const guessInput = Number(document.querySelector(".guess-input").value);
   const msg = document.querySelector(".msg");
@@ -53,6 +54,3 @@ document.querySelector(".check-btn").addEventListener("click", () => {
 //? Uzgunuz kaybetiniz.
 
 //* againBtn basildiginda kontrolleri yap
-
-
-

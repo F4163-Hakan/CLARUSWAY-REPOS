@@ -2,10 +2,6 @@
 //*  GUESS MY NUMBER
 //*  Game Logic
 //*======================================
-//* =====================================
-//*  GUESS MY NUMBER
-//*  Game Logic
-//*======================================
 
 //? 1-100 arasinda rasgele bir sayi tut.
 const randomNumber = Math.round(Math.random() * 100);

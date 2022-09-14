@@ -10,4 +10,8 @@ List of coding challenges within JavaScript workshop as follows;
 
 - [JS - CC04 - Roman Numerals](./CC-04/README.md)
 
+- [JS - CC05 - Vowels ](./CC-05/README.md)
+
+- [JS - CC06 - Draw a Diamond](./CC-06/README.md)
+
 

@@ -12,11 +12,11 @@ const newUl = document.createElement("ul");
 langList.appendChild(newUl);
 
 
-addBtn.addEventListener("click", ()=>{
-  if(!langInput.value){
+addBtn.addEventListener("click", () => {
+  if (!langInput.value) {
     alert("Please enter a language");
-    else{
-      newUl.innerHTML+= `<li>${langInput.value}</li>`
+    else {
+      newUl.innerHTML += `<li>${langInput.value}</li>`
       langInput.value = "";
     }
   }
@@ -33,22 +33,15 @@ deleteBtn.addEventListener("click", () => {
 
 //? enter key and  del key event handler
 langInput.addEventListener("keydown", (event) => {
-  // console.log(event);
-  // console.log(event.target);
-  // console.log(event.keyCode);
-  // console.log(event.code);
-
-  if (event.keyCode === 13) {
+  if (event.code === "Enter") {
     addBtn.click();
   }
 
-  // if (event.code === "Delete") {
-  //   deleteBtn.click();
-  // }
-
-  if (event.keyCode === 46) {
+  if (event.code === "Delete") {
     deleteBtn.click();
   }
+
+
 });
 
 

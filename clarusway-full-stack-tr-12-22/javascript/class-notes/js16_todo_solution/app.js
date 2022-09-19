@@ -13,7 +13,7 @@ addBtn.addEventListener("click", () => {
   } else {
     const newTodo = {
       id: new Date().getTime(),
-      completed: true,
+      completed: false,
       text: todoInput.value,
     };
 
@@ -55,6 +55,15 @@ const createListElement = (newTodo) => {
   //? meydana gelen li elementini ul'ye child olarak ata
   todoUl.appendChild(li);
 };
+
+todoUl.addEventListener("click", (e) => {
+  console.log(e.target);
+
+  //! event, bir delete butonundan geldi ise
+  if (e.target.classList.contains("fa-trash")) {
+    e.target.parentElement.remove();
+  }
+});
 
 //? Enter tusu ile ekleme mumkun olsun
 todoInput.addEventListener("keydown", (e) => {

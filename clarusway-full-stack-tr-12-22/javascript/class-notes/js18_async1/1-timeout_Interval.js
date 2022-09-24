@@ -5,8 +5,7 @@
 //! Javascript, single-threaded ve Asenkron Programlama dilidir.
 
 //? Asenkron Programlama
-//?
- --------------------------------------------------------------
+//? --------------------------------------------------------------
 //? Asenkron Programlama, bir alt gorevin uygulamanin asil thread'inden
 //? bagimsiz olarak arka planda calistirilmasina izin veren paralel programlama
 //? teknigidir. Bu alt gorev tamamlandiginda (basriyla veya basarisizlikla)

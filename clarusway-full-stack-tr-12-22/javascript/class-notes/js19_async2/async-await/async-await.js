@@ -1,5 +1,5 @@
 //*=================================================
-//*              ASYNC-AWAIT
+//*               ASYNC-AWAIT
 //*=================================================
 //? Async-Await ECMAScript 2017 ile Javascript diline eklenmistir.
 //? Aslinda Promise yapisinin syntax olarak basitlestirilmis halidir.
@@ -18,6 +18,42 @@
 //* satirdaki kodun durudurulmasini saglar. Yapilan istek yerine getirilip sonuc
 //* degerlerinin dondurulmesine ile kodun calismasi devam eder.
 
+const getNews = async function () {
+  const API_KEY = "55e3f1fdc1c94581b6b11537c9b8f8bf";
+  const url =
+    "https://newsapi.org/v2/top-headlines?country=us&apiKey=" + API_KEY;
 
- https://newsapi.org/v2/top-headlines?country=tr&apiKey=cd8a8d77a8b24209927ac807383adf61
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error(`Something went wrong: ${res.status} `);
+    }
+    const data = await res.json();
+    // console.log(data.articles);
+    renderNews(data.articles);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
+const renderNews = (news) => {
+  const newsList = document.getElementById("news-list");
+
+  news.forEach((item) => {
+    const { title, description, urlToImage, url } = item; //! dest
+    newsList.innerHTML += `
+    <div class="col-md-6 col-lg-4 col-xl-3">
+      <div class="card">
+        <img src="${urlToImage}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${title}</h5>
+          <p class="card-text">${description}</p>
+          <a href="${url}" target="_blank" class="btn btn-danger">Details</a>
+        </div>
+      </div>
+    </div>
+    `;
+  });
+};
+
+window.addEventListener("load", getNews);

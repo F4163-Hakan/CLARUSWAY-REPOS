@@ -17,3 +17,7 @@
 //* Await, promise-temelli herhangi bir fonksiyonun onune getirilerek getirildigi
 //* satirdaki kodun durudurulmasini saglar. Yapilan istek yerine getirilip sonuc
 //* degerlerinin dondurulmesine ile kodun calismasi devam eder.
+
+
+ https://newsapi.org/v2/top-headlines?country=tr&apiKey=cd8a8d77a8b24209927ac807383adf61
+

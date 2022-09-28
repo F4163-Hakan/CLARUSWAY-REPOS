@@ -55,13 +55,9 @@ const renderCountries = (data) => {
           <i class="fas fa-lg fa-comments"></i> ${Object.values(languages)}
         </li>
         <li class="list-group-item">
-          <i class="fas fa-lg fa-money-bill-wave"></i> ${
-            Object.values(currencies)[0].name
-          },
-
-          ${Object.values(currencies)[0].symbol},
-
-        </li>
+          <i class="fas fa-lg fa-money-bill-wave"></i>
+          ${Object.values(currencies).map((item) => Object.values(item) + " ")}
+       </li>
       </ul>
       <div class="card-body">
         <a href="#" class="card-link">Card link</a>
@@ -74,5 +70,5 @@ const renderCountries = (data) => {
 };
 
 fetchCountryByName("turkey");
-fetchCountryByName("russia");
+fetchCountryByName("western sahara");
 fetchCountryByName("south africa");

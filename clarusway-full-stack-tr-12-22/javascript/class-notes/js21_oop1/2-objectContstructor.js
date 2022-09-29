@@ -23,5 +23,11 @@ function Book(title, author, year) {
 //? Constructor, mantiksal bir ifade iken instance fiziksel bir olusum gibi dusunulebilir.
 //? Contructor'da tanimlanmis tum degisken ve fonksiyonlar olusturulan
 //? her bir instance'da hayat bulmus olur.
+
+//?instance
 const book1 = new Book("Kasagi", "Omer Seyfettin", 1920);
+
+//?instance
 const book2 = new Book("Sinekli Bakkal", "H. Edip Adıvar", 1930);
+
+console.log(book1);

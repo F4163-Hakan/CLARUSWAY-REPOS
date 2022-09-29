@@ -25,4 +25,3 @@ function Book(title, author, year) {
 //? her bir instance'da hayat bulmus olur.
 const book1 = new Book("Kasagi", "Omer Seyfettin", 1920);
 const book2 = new Book("Sinekli Bakkal", "H. Edip Adıvar", 1930);
-

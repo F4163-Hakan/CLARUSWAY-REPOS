@@ -47,6 +47,13 @@ Book.prototype.getSummary = function () {
 Book.prototype.price = 100;
 // book1.price = 100;
 
+/* Ornegin Book nesnesinin tum instance'lari getAge() fonksiyonunu miras alabilir.
+//* Ancak, getAge() fonksiyonu bellekte sadece bir yer kaplamaktadir.
+//* Bir nesnenin prototiplerine .prototype ile erisilebilir.
+//* Ancak bir instance'in prototiplerine .__proto__ ile erisilmektedir.
+
+
+
 console.log(book1);
 console.log(book1.getSummary());
 

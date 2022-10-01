@@ -24,13 +24,14 @@
 //! Private metotlara ancak class icerisindeki diger metotlar ile erisilebilir.
 
 class Book {
-  //? Private property
-  #id = "123456";
+  #id;
   constructor(title, author, year) {
     this.author = author;
     this.title = title;
     this.year = year;
 
+    //? Private property
+    this.#id = 44;
     this.getTitle = function () {
       return this.title;
     };
@@ -57,7 +58,6 @@ class Book {
   }
 
   //!private metot tanimlanmsi
-
   #computeAge() {
     return new Date().getFullYear() - this.year;
   }

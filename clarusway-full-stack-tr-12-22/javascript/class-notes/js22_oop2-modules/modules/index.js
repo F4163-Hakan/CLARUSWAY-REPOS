@@ -8,7 +8,7 @@ import karesi, {
   sum,
   counter,
 } from "./mymodule.js";
-import selamla from "./module2.js";
+import ugurla, { selam } from "./module2.js";
 
 // import { default as karesi, WHW, WORKING_HOURS_WEEK, dec, inc, sum, counter } from './mymodule.js';
 
@@ -25,5 +25,5 @@ console.log("counter :>> ", counter);
 // counter = 29; // ! sabit gibi davranır
 inc();
 console.log("counter :>> ", counter);
-
-selamla();
+selam();
+ugurla();

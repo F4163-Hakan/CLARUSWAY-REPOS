@@ -20,6 +20,6 @@ dec();
 console.log("dec() :>> ", dec());
 inc();
 console.log("counter :>> ", counter);
-counter = 29;
+// counter = 29; // ! sabit gibi davranır
 inc();
 console.log("counter :>> ", counter);

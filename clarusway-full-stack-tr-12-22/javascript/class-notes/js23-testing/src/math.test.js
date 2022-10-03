@@ -18,17 +18,29 @@ describe("calculateTotal", () => {
     expect(calculateTotal).toBeDefined();
   });
 
-  it("should return a number", () => {});
+  it("should return a number", () => {
+    expect(calculateTotal(100, 0.2)).toBe(120);
+  });
+
+  it("should return with default VAT", () => {
+    expect(calculateTotal(200)).toBe(236);
+  });
 });
 
 describe("celsiusToFahrenheit", () => {
-  //
+  it("should exist", () => {
+    expect(celsiusToFahrenheit).toBeDefined();
+  });
 });
 
 describe("fahrenheitToCelsius", () => {
-  //
+  it("should exist", () => {
+    expect(fahrenheitToCelsius).toBeDefined();
+  });
 });
 
 describe("fibonacci", () => {
-  //
+  it("should exist", () => {
+    expect(fibonacci).toBeDefined();
+  });
 });

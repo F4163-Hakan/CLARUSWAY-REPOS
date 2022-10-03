@@ -3,7 +3,7 @@
 //* ======================================================
 
 //? Static degiskenler ve metotlar butun bir class'i ilgilendiren
-//? verileri tutmak veya degistirmek icin elverislidir.
+//? verileri tutmak veya degistirmek icin elverislidir...
 
 //? Eger nesnelerden bagimsiz sadece ilgili class' a ait bir degiskene
 //? ihtiyac varsa o zaman static degisken kullanmak mantiklidir.

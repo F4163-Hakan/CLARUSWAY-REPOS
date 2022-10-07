@@ -1,6 +1,5 @@
 const setTime = () => {
-  //! Vanilla JS Element...
-
+  //! Vanilla JS Element
   const jsElement = `
    <div>
       <h1>Javascript Element</h1>
@@ -10,8 +9,7 @@ const setTime = () => {
 
   document.querySelector(".container-1").innerHTML = jsElement;
 
-  //! React Element without JSX...
-
+  //! React Element without JSX
   const reactElement = React.createElement(
     "div",
     null,

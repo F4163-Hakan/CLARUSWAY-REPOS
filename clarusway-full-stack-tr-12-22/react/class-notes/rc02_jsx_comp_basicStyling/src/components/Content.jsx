@@ -12,19 +12,30 @@
 //?Harici stillneidmre dosyasi
 
 // ? Dahili bir resim eklemek icin import yapmak gereklidir.
+import img2 from "../img/spring2.jpg";
 
 const Content = () => {
+  //* JS alanı
+  const imgStyle = {
+    display: "block",
+    width: "300px",
+    margin: "1rem auto",
+  };
   return (
+    //* JSX alanı
     <div>
-      <h2>React JS</h2>
-      <p>
+      {/* Inline Style */}
+      <h2 style={{ color: "red" }}>React JS</h2>
+      <p style={{ backgroundColor: "lightgreen" }}>
         React, Kullanici arabirimi tasarlamak icin kullanilan bir JS
         kütüphanesidir.
       </p>
       <img
+        style={imgStyle}
         src="https://cdn.pixabay.com/photo/2017/02/15/13/40/tulips-2068692__340.jpg"
         alt="img1"
       />
+      <img style={imgStyle} src={img2} alt="img2" />
     </div>
   );
 };

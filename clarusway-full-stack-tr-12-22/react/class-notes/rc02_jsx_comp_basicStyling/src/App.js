@@ -1,4 +1,5 @@
 import React from "react";
+import Content from "./components/Content";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
@@ -23,6 +24,7 @@ function App() {
     //? stillendirme yapilmayacaksa container icin <> kullanilabilir
     <>
       <Header />
+      <Content />
       <Footer />
     </>
   );

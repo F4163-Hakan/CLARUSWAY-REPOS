@@ -19,6 +19,8 @@ import Header from "./components/Header";
 //? App componentinin function declaration ile tanimlanmasi
 function App() {
   return (
+    //* JSX
+    //? stillendirme yapilmayacaksa container icin <> kullanilabilir
     <>
       <Header />
       <Footer />

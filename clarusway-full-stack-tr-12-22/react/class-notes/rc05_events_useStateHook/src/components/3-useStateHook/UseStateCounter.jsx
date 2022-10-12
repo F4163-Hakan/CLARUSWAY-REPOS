@@ -18,8 +18,55 @@
 //?    https://reactjs.org/docs/hooks-rules.html
 //* =============================================================
 
+import { useState } from "react";
+
 const UseStateCounter = () => {
-  return <div>UseStateCounter</div>;
+  //* useState en cok kullanilan Hook'tur.
+  //* Bir state'in degisken, dizi ve obje ile kullanilabilmesine olanak saglar.
+  //? useState hook'u bir dizi dondurur.Bu dizi array dest ile acilabilir.
+  //?  Acilan dizinin 1.elemani state degiskenidir.
+  //?  2.si ise state'i degistirmeye izin veren bir setter metodudur.
+  //? useState parametre olarak state'in ilk degerini alir.
+
+  const [count, setCount] = useState(0); //? arr destr.
+
+  const inc = () => {
+    setCount(count + 1);
+  };
+
+  // const dec = () => {
+  //   if (count > 0) {
+  //     setCount(count - 1);
+  //   }
+  // };
+
+  return (
+    <div className="container text-center mt-4">
+      <section>
+        <h1>USESTATE HOOK</h1>
+        <h2 className="display-4 text-danger">COUNT:{count}</h2>
+        <button onClick={inc} className="btn btn-success">
+          INC
+        </button>
+
+        <button onClick={() => setCount(0)} className="btn btn-dark">
+          CLR
+        </button>
+        {/* <button onClick={dec} className="btn btn-danger">
+        DEC
+      </button> */}
+        <button
+          onClick={() => count > 0 && setCount(count - 1)}
+          className="btn btn-danger"
+        >
+          DEC
+        </button>
+      </section>
+      <section>
+        <h1>USESTATE OBJECT</h1>
+      </section>
+    </div>
+  );
 };
 
 export default UseStateCounter;

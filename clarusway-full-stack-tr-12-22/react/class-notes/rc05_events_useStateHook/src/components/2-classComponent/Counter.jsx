@@ -17,20 +17,39 @@ class Counter extends Component {
 
     //! count state'ine baslangic degeri atadik
     this.state = {
-      count: 0,
+      count: props.count || 0,
     };
+    //? increment metodunun Counter class'ina baglanmasi (bind)
+    this.increment = this.increment.bind(this);
   }
+  increment() {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  }
+
+  //! Yazmis oldugumuz metotlar default olarak classa baglanmaz.
+  //! Ancak, React built-in fonksiyonlari baglidir.
+
+  //* Bunun icin metotlarimizi ya constructor icerisinde baglamaliyiz yada otomatik baglamayi saglayan arrow fonksiyonlarini kullanmaliyiz.
+  decrement = () => {
+    this.setState({
+      count: this.state.count - 1,
+    });
+  };
 
   render() {
     return (
       <div className="container text-center mt-4">
         <h1>CLASSFUL COMPONENTS</h1>
-        <h2 className="display-4 text-danger">COUNT:</h2>
-        <button className="btn btn-success">INC</button>
+        <h2 className="display-4 text-danger">COUNT:{this.state.count}</h2>
+        <button onClick={this.increment} className="btn btn-success">
+          INC
+        </button>
 
-        <button className="btn btn-dark">CLR</button>
-
-        <button className="btn btn-danger">DEC</button>
+        <button onClick={this.decrement} className="btn btn-danger">
+          DEC
+        </button>
       </div>
     );
   }

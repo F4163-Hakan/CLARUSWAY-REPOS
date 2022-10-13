@@ -7,6 +7,7 @@ const FormObject = () => {
     password: "",
   });
 
+  //? destr
   const { username, password, email } = formValues;
 
   const handleSubmit = (e) => {
@@ -18,7 +19,11 @@ const FormObject = () => {
           password:${password}
     `);
   };
-  const handleForm = () => {};
+  const handleForm = (e) => {
+    console.log(e.target.value);
+    console.log(e.target.name);
+    console.log(e.target.id);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
@@ -29,6 +34,7 @@ const FormObject = () => {
           Username: <span className="text-danger">{username}</span>
         </label>
         <input
+          name="username"
           type="text"
           className="form-control"
           id="username"

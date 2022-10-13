@@ -13,6 +13,9 @@ const Form = () => {
           email:${email},
           password:${password}
     `);
+    setUsername("");
+    setEmail("");
+    setPassword("");
   };
 
   const handleUsername = (e) => {

@@ -18,11 +18,16 @@ const FormObject = () => {
           email:${email},
           password:${password}
     `);
+    setFormValues({
+      username: "",
+      email: "",
+      password: "",
+    });
   };
   const handleForm = (e) => {
     console.log(e.target.value);
-    console.log(e.target.name);
     console.log(e.target.id);
+    setFormValues({ ...formValues, [e.target.id]: e.target.value });
   };
 
   return (
@@ -34,7 +39,6 @@ const FormObject = () => {
           Username: <span className="text-danger">{username}</span>
         </label>
         <input
-          name="username"
           type="text"
           className="form-control"
           id="username"

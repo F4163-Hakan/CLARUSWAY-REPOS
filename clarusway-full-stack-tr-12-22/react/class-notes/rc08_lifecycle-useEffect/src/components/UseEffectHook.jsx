@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 //! }, []);
 
 //! useEffect(() => {
-//*   */ componentDidUpdate code */
+//*   */ ComponentDidMount + componentDidUpdate code */
 //! }, [var1, var2]);
 
 //! useEffect(() => {
@@ -28,10 +28,19 @@ import { useState, useEffect } from "react";
 //!   return () => {
 //*     //* componentWillUnmount code */
 //!   };
-//! }, [var1, var2]);
+//! }, [var1, var2]); //? Dependency Array
 
 const UseEffectHook = () => {
-  return <div>UseEffectHook</div>;
+  const [count, setCount] = useState(0);
+  return (
+    <div className="container text-center">
+      <h1 className="text-danger">USE EFFECT</h1>
+      <h3>COUNT={count}</h3>
+      <button className="btn btn-info" onClick={() => setCount(count + 1)}>
+        INC
+      </button>
+    </div>
+  );
 };
 
 export default UseEffectHook;

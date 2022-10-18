@@ -8,6 +8,7 @@ const Home = () => {
 
   const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
 
+  //? CRUD: (GET-READ)
   const getTutorials = async () => {
     try {
       const { data } = await axios(url);
@@ -25,7 +26,7 @@ const Home = () => {
 
   return (
     <>
-      <AddTutorial />
+      <AddTutorial getTutorials={getTutorials} />
       <TutorialList tutor={tutorials} />
     </>
   );

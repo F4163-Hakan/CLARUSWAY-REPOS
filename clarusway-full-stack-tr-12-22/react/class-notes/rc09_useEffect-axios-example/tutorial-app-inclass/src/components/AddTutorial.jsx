@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const AddTutorial = () => {
 
-  
+
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
 
@@ -41,6 +41,7 @@ const AddTutorial = () => {
             required
           />
         </div>
+        
         <button className="btn btn-danger mb-4">Submit</button>
       </form>
     </div>

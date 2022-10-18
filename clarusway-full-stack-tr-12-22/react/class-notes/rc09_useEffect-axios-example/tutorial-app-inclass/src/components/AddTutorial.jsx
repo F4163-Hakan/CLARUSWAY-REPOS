@@ -32,7 +32,6 @@ const AddTutorial = ({ getTutorials }) => {
           <label htmlFor="title" className="form-label">
             Title
           </label>
-          
           <input
             type="text"
             className="form-control"

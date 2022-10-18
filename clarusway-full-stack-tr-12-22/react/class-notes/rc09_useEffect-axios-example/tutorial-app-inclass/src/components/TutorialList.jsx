@@ -1,7 +1,33 @@
 import { FaEdit } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
+import axios from "axios";
+import EditTutorial from "./EditTutorial";
 
-const TutorialList = ({ tutor }) => {
+const TutorialList = ({ tutor, getTutorials }) => {
+  //! DELETE (CRUD-Delete)
+  const deleteTutorial = async (id) => {
+    const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
+    try {
+      await axios.delete(`${url}/${id}`);
+    } catch (error) {
+      console.log(error);
+    }
+    getTutorials();
+  };
+
+  //! PUT (CRUD-Update)
+  //! PUT: Whole Update, PATCH: Partially Update
+  const editTutorial = async ({ id, title, description }) => {
+    // const { id, title, description } = item;
+    const url = "https://tutorials-api-cw.herokuapp.com/api/tutorials";
+    try {
+      await axios.put(`${url}/${id}`, { title, description });
+    } catch (error) {
+      console.log(error);
+    }
+    getTutorials();
+  };
+
   return (
     <div className="container mt-4">
       <table className="table table-striped">
@@ -27,12 +53,22 @@ const TutorialList = ({ tutor }) => {
                   <FaEdit
                     size={20}
                     type="button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#edit-modal"
                     className="me-2 text-warning"
+                    onClick={() =>
+                      editTutorial({
+                        id: "1581",
+                        title: "UPDATE",
+                        description: "UPDATE",
+                      })
+                    }
                   />
                   <AiFillDelete
                     size={22}
                     type="button"
                     className="text-danger "
+                    onClick={() => deleteTutorial(id)}
                   />
                 </td>
               </tr>
@@ -40,6 +76,8 @@ const TutorialList = ({ tutor }) => {
           })}
         </tbody>
       </table>
+
+      <EditTutorial />
     </div>
   );
 };

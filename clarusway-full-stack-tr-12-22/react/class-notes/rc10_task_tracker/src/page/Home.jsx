@@ -29,12 +29,12 @@ const Home = () => {
 
   return (
     <div>
-      <Button 
+      <Button
       onClick={()=>{toggle()}}
       size="lg"
       variant="danger">{text}</Button>
       { isOpen && <AddTask/>}
-     
+
       <TaskList />
     </div>
   );

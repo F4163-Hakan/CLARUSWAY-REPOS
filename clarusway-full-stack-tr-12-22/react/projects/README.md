@@ -8,6 +8,8 @@ List of projects within React projects as follows;
 
 - [Task Tracker](./003-Task-Tracker/README.md)
 
+- [Random User App - 2](./004-Random-User-App/README.md)
+
 
 
   

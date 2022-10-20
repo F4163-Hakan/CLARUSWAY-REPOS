@@ -28,7 +28,7 @@ const Home = () => {
   },[])
 
   return (
-    <div>
+    <div className="mt-4 d-flex justfy-content-center flex-column">
       <Button
       onClick={()=>{toggle()}}
       size="lg"

@@ -9,7 +9,6 @@ const AddTask = ({getTask}) => {
   const [task,setTask]=useState("")
   const [date,setDate]=useState("")
 
-  
   const handleSubmit=(e)=>{
     e.preventDefault();
     const newTask={task,date}
@@ -23,7 +22,7 @@ const AddTask = ({getTask}) => {
   const url="https://63516c99dfe45bbd55bfd9a2.mockapi.io/api/tasks"
   try {
     await axios.post(url,newTask)
-  }catch (error) {
+  }catch (error) { 
 
   }
   getTask();
@@ -37,14 +36,14 @@ const AddTask = ({getTask}) => {
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Task</Form.Label>
         <Form.Control type="text"
-         placeholder="Enter task"
+         placeholder="Enter task" 
          onChange={(e)=>setTask(e.target.value)}/>
       </Form.Group>
 
-
+      
       <Form.Group className="mb-3" controlId="formBasicPassword">
         <Form.Label>Date</Form.Label>
-        <Form.Control type="date"
+        <Form.Control type="date" 
         onChange={(e)=>setDate(e.target.value)}/>
       </Form.Group>
     <div className="text-center">

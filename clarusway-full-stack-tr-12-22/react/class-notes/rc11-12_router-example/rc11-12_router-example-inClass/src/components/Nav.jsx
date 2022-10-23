@@ -2,13 +2,14 @@ import logo from "../img/logo.png";
 import { Link, NavLink } from "react-router-dom";
 
 function Nav() {
-  
+
   return (
     <nav className="navbar navbar-expand-md navbar-light">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           <img src={logo} alt="" />
         </Link>
+        
         <button
           className="navbar-toggler"
           type="button"

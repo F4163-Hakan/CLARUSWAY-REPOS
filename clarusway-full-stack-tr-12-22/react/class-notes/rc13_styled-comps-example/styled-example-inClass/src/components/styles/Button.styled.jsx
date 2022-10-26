@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+
 const Button = styled.button`
   background: ${({ bg }) => bg || "white"};
   color: ${({ color }) => color || "white"};
@@ -11,6 +12,7 @@ const Button = styled.button`
   margin-right: 0.5rem;
   margin: 2rem 0.5rem;
   cursor: pointer;
+  
   &:hover {
     opacity: 0.9;
     transform: scale(0.97);

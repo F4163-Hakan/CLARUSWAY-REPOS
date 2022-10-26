@@ -4,7 +4,9 @@ import StyledHeader, { Logo, Nav, Image } from "./styles/Header.styled";
 
 const Header = () => {
   return (
+
     <StyledHeader>
+      
       <Nav>
         <Logo src="./images/logo.png" />
         <div>

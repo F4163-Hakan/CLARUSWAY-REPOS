@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "./components/styles/Global.styled";
 
+
 const style = {
   colors: {
     header: "#fff",
@@ -11,6 +12,7 @@ const style = {
   margins: {},
   responsive: "724px",
 };
+
 
 const App = () => {
   return (

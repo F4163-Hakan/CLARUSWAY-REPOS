@@ -6,8 +6,8 @@ import theme from "./components/globalStyles/theme";
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <AppRouter />
-    </ThemeProvider>
+        <AppRouter />
+      </ThemeProvider>
   );
 }
 

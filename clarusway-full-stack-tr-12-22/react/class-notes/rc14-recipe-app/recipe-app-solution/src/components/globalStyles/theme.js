@@ -5,3 +5,4 @@ const theme={
         logoColor:"'#393e46',"
     }
 }
+export default theme;

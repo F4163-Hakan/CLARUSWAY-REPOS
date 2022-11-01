@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Flex from "../../components/globalStyles/Flex.style";
+import styled from 'styled-components';
+import Flex from '../../components/globalStyles/Flex.style';
 
 export const MainContainer = styled(Flex)`
   flex-direction: row;
@@ -41,4 +41,3 @@ export const Header = styled.h1`
   font-size: 1.5rem;
   text-align: center;
 `;
-

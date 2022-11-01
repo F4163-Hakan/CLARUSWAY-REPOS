@@ -6,7 +6,6 @@ export const ImgDiv = styled.div`
   margin: 1.5rem;
 `;
 
-
 export const HomeImg = styled.img`
   width: 80%;
   max-width: 750px;
@@ -14,6 +13,6 @@ export const HomeImg = styled.img`
 
 export const HeaderText = styled.h1`
   font-size: 2.5rem;
-  color: red;
+  color: #a93434;
   text-align: center;
 `;

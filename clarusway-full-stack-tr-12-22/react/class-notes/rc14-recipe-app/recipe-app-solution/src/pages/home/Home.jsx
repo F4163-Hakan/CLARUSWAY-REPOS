@@ -42,7 +42,6 @@ const Home = () => {
         getData={getData}
       />
 
-
     {!recipes &&
     <ImgDiv>
     <HomeImg src={homeSvg} />

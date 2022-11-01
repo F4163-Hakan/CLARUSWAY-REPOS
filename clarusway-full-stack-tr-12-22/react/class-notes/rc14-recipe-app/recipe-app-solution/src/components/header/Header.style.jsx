@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Flex from "../globalStyles/Flex.style";
+import styled from 'styled-components';
+import Flex from '../globalStyles/Flex.style';
 
 export const HeaderContainer = styled(Flex)`
   background: ${({ theme }) => theme.colors.mainColor};
@@ -57,4 +57,3 @@ export const Select = styled.select`
   border: none;
   font-size: 2rem;
 `;
-

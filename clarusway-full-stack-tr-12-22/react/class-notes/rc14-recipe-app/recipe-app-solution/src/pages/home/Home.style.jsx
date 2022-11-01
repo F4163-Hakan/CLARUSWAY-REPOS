@@ -6,6 +6,7 @@ export const ImgDiv = styled.div`
   margin: 1.5rem;
 `;
 
+
 export const HomeImg = styled.img`
   width: 80%;
   max-width: 750px;

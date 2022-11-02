@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import Flex from "../../components/globalStyles/Flex.style";
+import styled from 'styled-components';
+import Flex from '../../components/globalStyles/Flex.style';
 
 export const DetailContainer = styled(Flex)`
   flex-direction: column;

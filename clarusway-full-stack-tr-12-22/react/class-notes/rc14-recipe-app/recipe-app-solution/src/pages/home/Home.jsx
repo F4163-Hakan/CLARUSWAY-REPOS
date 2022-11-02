@@ -5,10 +5,10 @@ import Cards from "../../components/cards/Cards";
 import { HeaderText, HomeImg, ImgDiv } from "./Home.style";
 import homeSvg from "../../assets/home.svg";
 
-
 const Home = () => {
-  const APP_ID = "4e9f05eb";
-  const APP_KEY = "9b904d703fa0d46a88ce1ac63f29f498";
+  const APP_ID =process.env.REACT_APP_APP_ID
+  const APP_KEY =process.env.REACT_APP_APP_KEY
+  
   const [query, setQuery] = useState("egg");
   const [selectedMeal, setSelectedMeal] = useState("breakfast");
   const [recipes, setRecipes] = useState(null);

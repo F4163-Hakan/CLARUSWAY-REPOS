@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const UseStateExample = () => {
+const UseReducerExample = () => {
   const [catImage, setCatImage] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -39,4 +39,4 @@ const UseStateExample = () => {
   );
 };
 
-export default UseStateExample;
+export default UseReducerExample;

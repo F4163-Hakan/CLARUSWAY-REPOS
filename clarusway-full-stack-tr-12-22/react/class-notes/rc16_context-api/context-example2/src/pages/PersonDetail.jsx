@@ -11,7 +11,6 @@ const PersonDetail = () => {
   const [person, setPerson] = useState(null);
   const [error, setError] = useState(false);
 
-  
   useEffect(() => {
     fetch(`https://reqres.in/api/users/${id}`)
       .then((res) => {

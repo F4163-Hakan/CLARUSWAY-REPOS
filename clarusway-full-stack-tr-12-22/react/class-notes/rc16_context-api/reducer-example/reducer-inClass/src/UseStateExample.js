@@ -8,7 +8,7 @@ const UseStateExample = () => {
   const getCatImage = async () => {
     const url = "https://api.thecatapi.com/v1/images/search";
     setLoading(true);
-    
+
     try {
       const res = await fetch(url);
       const data = await res.json();
@@ -25,7 +25,7 @@ const UseStateExample = () => {
   console.log(error);
   console.log(catImage);
 
-  return (
+    return (
     <div>
       <button
         onClick={getCatImage}

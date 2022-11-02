@@ -5,6 +5,7 @@ const UseReducerExample = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
+  
   const getCatImage = async () => {
     const url = "https://api.thecatapi.com/v1/images/search";
     setLoading(true);

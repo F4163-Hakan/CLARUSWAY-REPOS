@@ -14,6 +14,7 @@ function App() {
   const [user, setUser] = useState("");
 
   return (
+    
     <LoginContext.Provider value={{ user, setUser }}>
       <BrowserRouter>
         <Navs />

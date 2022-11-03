@@ -29,6 +29,7 @@ export default function CardGrid() {
                       {text}
                     </Typography>
                   </CardContent>
+                  
                 </CardActionArea>
                 <CardActions>
                   <Button size="small" color="primary">

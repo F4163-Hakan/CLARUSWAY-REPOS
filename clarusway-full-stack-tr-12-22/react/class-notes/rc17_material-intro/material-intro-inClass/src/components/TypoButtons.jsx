@@ -7,7 +7,6 @@ import SendIcon from "@mui/icons-material/Send";
 
 
 const TypoButtons = () => {
-
   return (
      <>
       <Container maxWidth="md">

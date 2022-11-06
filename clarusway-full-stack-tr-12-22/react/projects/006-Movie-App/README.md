@@ -75,7 +75,7 @@ Build a Movie App using ReactJS.
 - Before start you can watch these tutorials:
   - https://www.youtube.com/watch?v=9bXhf_TELP4
   - https://www.youtube.com/watch?v=vDT7EnUpEoo
-- Step 1 : Create React App using `npx create-react-app movie-app`
+- Step 1 : Create React App using `npx create-react-app movie-app` and install firebase `npm i firebase` / `yarn add firebase`
 
 - Step 2 : Signup `https://firebase.google.com/` and create new app in firebase.
   Firebase is a backed application development software that enables developers to develop iOS, Android and Web apps. It provides developers with a variety of tools and services to help them develop quality apps, grow their user base, and earn profit. It is built on Google’s infrastructure. Firebase offers a number of services, including: analytics,authentication, cloud messaging, realtime database, performance and test lab. Firebase is categorized as a NoSQL database program, which stores data in JSON-like documents.
@@ -86,8 +86,8 @@ Build a Movie App using ReactJS.
   - Add the Firebase Authentication JS codes in your `firebase.js` file and initialize Firebase Authentication:
 
 ```jsx
-import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 // TODO: Replace the following with your app's Firebase project configuration at project settings part
 // See: https://firebase.google.com/docs/web/learn-more#config-object
@@ -105,7 +105,7 @@ const auth = getAuth(app);
 - Use this method to `Sign up new users` :
 
 ```jsx
-import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
@@ -121,7 +121,7 @@ createUserWithEmailAndPassword(auth, email, password)
 - Use this method to `Sign in existing users` :
 
 ```jsx
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
@@ -136,7 +136,7 @@ signInWithEmailAndPassword(auth, email, password)
 - Use this method to `Set an authentication state observer and get user data` :
 
 ```jsx
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -152,7 +152,7 @@ onAuthStateChanged(auth, (user) => {
 - Use this method to `Authenticate Using Google with Popup` :
 
 ```jsx
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider } from "firebase/auth";
 
 const provider = new GoogleAuthProvider();
 
@@ -170,7 +170,7 @@ signInWithPopup(auth, provider)
 - Use this method to `Sign Out` :
 
 ```jsx
-import { getAuth, signOut } from 'firebase/auth';
+import { getAuth, signOut } from "firebase/auth";
 
 signOut(auth)
   .then(() => {
@@ -181,7 +181,22 @@ signOut(auth)
   });
 ```
 
-- Step 4 : Signup `https://www.themoviedb.org/documentation/api` and get API key. In order to get data use `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`, to search movies use `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=` and to get movie details use `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`. Use `https://image.tmdb.org/t/p/w1280${poster_path}` for image `src`.
+- Use this method to `Send a password reset email` :
+
+```jsx
+import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+
+sendPasswordResetEmail(auth, email)
+  .then(() => {
+    // Password reset email sent!
+  })
+  .catch((error) => {
+    const errorMessage = error.message;
+    // ..
+  });
+```
+
+- Step 4 : Signup `https://www.themoviedb.org/documentation/api` and get API key. In order to get data use `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`, to search movies use `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`, to get movie details use `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}` and to get video key use `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`. Use `https://image.tmdb.org/t/p/w1280${poster_path}` for image `src`.
 
 - Step 5: You can use css frameworks like Bootstrap, Semantic UI, Material UI.
 

@@ -7,7 +7,6 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import data from "../data";
 
-
 export default function CardGrid() {
   return (
     <>
@@ -28,10 +27,8 @@ export default function CardGrid() {
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                       {text}
-
                     </Typography>
                   </CardContent>
-
                 </CardActionArea>
                 <CardActions>
                   <Button size="small" color="primary">

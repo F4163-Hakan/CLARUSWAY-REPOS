@@ -7,7 +7,6 @@ import { teal } from "@mui/material/colors";
 import MakeStylesComp from "../components/MakeStylesComp";
 
 const Home = () => {
-  
   const theme = createTheme({
     palette: {
       primary: {

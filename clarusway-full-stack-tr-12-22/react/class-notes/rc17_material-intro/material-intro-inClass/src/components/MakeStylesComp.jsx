@@ -2,7 +2,6 @@ import { Button, Box } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
-  
   btn: {
     background: 'linear-gradient( 45deg, lightblue, blue)',
     border: 0,

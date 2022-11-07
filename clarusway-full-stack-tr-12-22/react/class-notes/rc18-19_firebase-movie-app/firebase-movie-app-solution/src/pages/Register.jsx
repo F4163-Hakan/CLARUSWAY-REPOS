@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import GoogleIcon from "../assets/icons/GoogleIcon";
+import { createUser } from "../auth/firebase";
 
 const Register = () => {
   //* ayrı stateler
@@ -17,6 +18,7 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    createUser(email, password);
     console.log(firstName, lastName);
   };
 

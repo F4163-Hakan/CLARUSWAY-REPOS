@@ -9,6 +9,7 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+import { toastSuccessNotify } from "../helpers/ToastNotify";
 
 //* Your web app's Firebase configuration
 // TODO: Replace the following with your app's Firebase project configuration
@@ -42,6 +43,7 @@ export const createUser = async (email, password, navigate, displayName) => {
       displayName: displayName,
     });
     navigate("/");
+    toastSuccessNotify("Registered successfully!");
     console.log(userCredential);
   } catch (error) {
     alert(error.message);
@@ -55,6 +57,7 @@ export const signIn = async (email, password, navigate) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
     navigate("/");
+    toastSuccessNotify("Logged in successfully!");
   } catch (error) {
     alert(error.message);
   }

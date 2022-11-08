@@ -68,6 +68,7 @@ export const userObserver = (setCurrentUser) => {
       setCurrentUser({ email, displayName, photoURL });
       console.log(user);
     } else {
+      setCurrentUser(false);
       console.log("user signed out");
     }
   });

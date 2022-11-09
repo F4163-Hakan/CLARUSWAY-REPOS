@@ -14,6 +14,8 @@ List of projects within React projects as follows;
 
 - [Movie App - RP-06](./006-Movie-App/README.md)
 
+- [Fire Contact App - RP-07](./007-Fire-Contact-App/README.md)
+
 
 
   

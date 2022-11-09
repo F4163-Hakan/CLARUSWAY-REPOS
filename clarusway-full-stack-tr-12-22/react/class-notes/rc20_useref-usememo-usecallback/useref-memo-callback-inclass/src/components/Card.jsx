@@ -1,7 +1,6 @@
 import React, { memo } from 'react'
 
 const Card = ({ data }) => {
-  
     console.log("Render => Card components")
     return (
         <div className="row row-cols-1 row-cols-md-4 g-4 p-2">

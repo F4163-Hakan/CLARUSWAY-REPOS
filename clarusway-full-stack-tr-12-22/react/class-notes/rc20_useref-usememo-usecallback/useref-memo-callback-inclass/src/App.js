@@ -1,5 +1,6 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState,useCallback } from "react";
 import Card from "./components/Card";
+import ClearButton from "./components/ClearButton";
 import Header from "./components/Header";
 import HeaderMemo from "./components/HeaderMemo";
 
@@ -28,6 +29,16 @@ function App() {
     setSearch(text)
   }
 
+  // const handleClear = ()=>{
+  //   setText("")
+  //   setSearch("")
+  // }
+
+  const handleClear = useCallback(()=>{
+      setText("")
+      setSearch("")
+     },[])
+
   return (
     <div className="container mt-2">
       <div>
@@ -48,8 +59,17 @@ function App() {
       <div className="row">
         <Card data={filteredData} />
       </div>
+      <hr />
+      <ClearButton handleClear={handleClear} />
+      <br /><br />
     </div>
   );
 }
 
 export default App;
+
+//useMemo
+// Shallow comparison’da eğer karşılaştırılan tipler nesne (Object) ise içerisindeki değerleri değil referans değerleri karşılaştırılır. Eğer karşılaştırılan nesneler memory’de aynı adresi gösteriyorsa true göstermiyorsa false olarak değer döndürür.
+
+// Input alanına bir değer girdiğimiz zaman App.js tekrar render edildiği için filteredData tekrar oluşur. filteredData tekrardan oluştuğu için Card componentine göndermiş olduğumuz data her seferinde farklı bir adrese sahip olur. Bu yüzdende React.memo Card componentine ilk seferde göndermiş olduğumuz data array’inin tutulduğu adres ile render edildikten sonra gelen data array’inin farklı adreste bulunduğunu gördüğü için CArd componentini tekrar render eder. Props olarak verdiğimiz array değişmediği halde Card componentinin render edilmesini engelleyebilmek için useMemo kullanabiliriz.
+

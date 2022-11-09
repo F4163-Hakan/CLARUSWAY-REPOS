@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Card from "./components/Card";
 import Header from "./components/Header";
 import HeaderMemo from "./components/HeaderMemo";
@@ -18,7 +18,11 @@ function App() {
       })
   }, [])
 
-  const filteredData = data?.filter(item=> item.name.toLowerCase().includes(search.toLowerCase()))
+  //const filteredData = data?.filter(item=> item.name.toLowerCase().includes(search.toLowerCase()))
+
+  const filteredData = useMemo(()=>{
+    return data?.filter(item=> item.name.toLowerCase().includes(search.toLowerCase()))
+  },[data,search])
 
   const handleSearch = ()=>{
     setSearch(text)

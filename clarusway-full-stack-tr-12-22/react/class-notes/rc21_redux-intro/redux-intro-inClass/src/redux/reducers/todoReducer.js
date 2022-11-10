@@ -4,7 +4,7 @@ const initialState = {
 
 const todoReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case first:
+    case "first":
       return { ...state, ...payload };
 
     default:

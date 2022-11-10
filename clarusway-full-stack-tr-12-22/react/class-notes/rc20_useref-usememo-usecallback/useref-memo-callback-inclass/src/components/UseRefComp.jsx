@@ -34,3 +34,15 @@ const UseRefComp = () => {
 }
 
 export default UseRefComp
+
+// Bir değişken değiştiğinde useState component’in tekrar render olmasını tetikler useRef component’in tekrar render olmasını tetiklemez.
+
+// useRef hook’u ile;
+
+// DOM node’larına veya React elementlerine erişebiliriz.
+// Mutable değişkenler tutabiliriz.
+// Vanilla Javascript ile yazılmış kütüphaneleri React’a uyarlarken faydalanabiliriz.
+// useRef hook’u kullanırken bunları dikkat etmeliyiz;
+// useRef ile oluşturulan bir ref sadece component oluştuğunda (onMount) oluşturulur ve tüm lifecycle’ı boyunca korunur.
+//Bir ref’i güncellemek “side effect” oluşturacağı için sadece useEffect, useLayoutEffect veya bir event handler içerisinde güncellenmelidir.
+

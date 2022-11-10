@@ -14,7 +14,7 @@ function App() {
   const [data, setData] = useState([])
 
   //const taxData = {"tax":0.18,"ship":15}
-  const taxData = useRef({"tax":0.18,"ship":15})
+  const taxData = useRef({"tax":0.18,"ship":15})//hafizada değişmeyen mutable değişken tanımlamamızda yarıyor
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -79,6 +79,8 @@ function App() {
 }
 
 export default App;
+
+//stateler her değiştiğinde component render olacağı için alt componentler de yeniden oluşturulur. bunu önlemenin yolu react memo kullanmak. memo bize sadece ilgili componente gönderilen değer değiştiğinde sardığı componenti tekrar render ettirir. faydasız kaldığı yer object tipli verilerdir. onu engellemenin yolu da useMemo kullanmak 
 
 //useMemo
 // Shallow comparison’da eğer karşılaştırılan tipler nesne (Object) ise içerisindeki değerleri değil referans değerleri karşılaştırılır. Eğer karşılaştırılan nesneler memory’de aynı adresi gösteriyorsa true göstermiyorsa false olarak değer döndürür.

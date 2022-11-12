@@ -5,7 +5,7 @@ const initialState = {
   loading: false,
   error: false,
 };
-//const API_KEY = "cd8a8d77a8b24209927ac807383adf61";
+
 const newsSlice = createSlice({
   name: "news",
   initialState,

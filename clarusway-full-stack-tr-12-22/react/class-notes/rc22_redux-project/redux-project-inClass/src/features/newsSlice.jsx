@@ -7,7 +7,7 @@ const initialState = {
   error: false,
 };
 
-//? State'lerin API gibi async kaynaklardan gelen verilere gore guncellenmesi gerekebilir.
+//? State'lerin API gibi async kaynaklardan gelen verilere gore guncellenmesi gerekebilir...
 //? Ancak boyle bir durumda async islem tamamlandiktan sonra state guncellenmelidir.
 //? Gonderilen api istegi ile dogrudan state guncellememelidir.
 //? Islemin tamamlanmasi ile gelen veriye gore state'in guncellenemsini saglamak

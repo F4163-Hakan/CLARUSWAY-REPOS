@@ -10,6 +10,7 @@ import { getNews } from "../features/newsSlice";
 import { useEffect } from "react";
 import loadinGif from "../assets/loading.gif";
 
+
 const News = () => {
   const { newsList, loading, error } = useSelector((state) => state.news);
   const dispatch = useDispatch();

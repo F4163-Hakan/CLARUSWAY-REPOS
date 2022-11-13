@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { clearUser } from "../features/authSlice";
 
+
 export default function Navbar() {
   const navigate = useNavigate();
   const dispatch = useDispatch();

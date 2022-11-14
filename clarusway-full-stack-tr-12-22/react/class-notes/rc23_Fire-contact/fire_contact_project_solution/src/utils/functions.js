@@ -1,5 +1,5 @@
 // ADD USER
-import { Identity } from "@mui/base";
+
 import { getDatabase, ref, set,push, onValue } from "firebase/database";
 import firebase from "./firebase"
 import {useState,useEffect} from "react"
@@ -20,7 +20,7 @@ export const AddUser=(info)=>{
 
 // READ INFO
 export const useFetch=()=>{
-    const [isLoading,setIsLoading]=useState()
+    const [isLoading,setIsLoading]=useState(true)
     const [contactList,setContactList]= useState()
     useEffect(() => {
         const db=getDatabase(firebase)
@@ -36,7 +36,8 @@ export const useFetch=()=>{
             setContactList(userArray)
             setIsLoading(false)
         })
-        return {isLoading,contactList}
+       
     },[])
+    return {isLoading,contactList}
 
 }

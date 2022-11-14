@@ -9,6 +9,8 @@ import {
   Paper,
 } from "@mui/material";
 import {useFetch} from "../../utils/functions"
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 
 const Contacts = () => {
   const {isLoading,contactList}=useFetch();
@@ -52,7 +54,19 @@ contactList?.lenght===0 ? (
 
 ) : (
   // Bilgiler geldiği zaman aşağıya yazılacak kodlar çalışsın
-  
+  contactList?.map((item,index)=>(
+    <TableRow>
+      <TableCell align="center">{item.username} </TableCell>
+      <TableCell align="center">{item.phoneNumber} </TableCell>
+      <TableCell align="center">{item.gender} </TableCell>
+      <TableCell align="center">
+          <DeleteIcon/>
+         </TableCell>
+      <TableCell align="center"> 
+        <EditIcon/>
+      </TableCell>
+    </TableRow>
+  ))
 )
 
   }

@@ -7,7 +7,7 @@ const initialState = {
   error: false,
 };
 
-//? State'lerin API gibi async kaynaklardan gelen verilere gore guncellenmesi gerekebilir...
+//? State'lerin API gibi async kaynaklardan gelen verilere gore guncellenmesi gerekebilir.
 //? Ancak boyle bir durumda async islem tamamlandiktan sonra state guncellenmelidir.
 //? Gonderilen api istegi ile dogrudan state guncellememelidir.
 //? Islemin tamamlanmasi ile gelen veriye gore state'in guncellenemsini saglamak
@@ -20,7 +20,7 @@ export const getNews = createAsyncThunk(
 
   async (thunkAPI, { rejectWithValue }) => {
     //! asyn callback function
-    const API_KEY = "02d142c50d8b4247b974b25323435174";
+    const API_KEY = "02d142c50d8b4247b974b2532343517";
     const url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
     try {
       const { data } = await axios(url);
@@ -36,7 +36,7 @@ const newsSlice = createSlice({
   name: "news",
   initialState,
   reducers: {
-    clearNewList: (state) => {
+    clearNewsList: (state) => {
       state.newsList = [];
     },
   },
@@ -56,7 +56,6 @@ const newsSlice = createSlice({
   },
 });
 
-
-export const { clearNewList } = newsSlice.actions;
+export const { clearNewsList } = newsSlice.actions;
 
 export default newsSlice.reducer;

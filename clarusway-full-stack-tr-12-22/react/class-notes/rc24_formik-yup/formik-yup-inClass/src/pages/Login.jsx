@@ -3,34 +3,15 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-import { Formik } from "formik";
 import LockIcon from "@mui/icons-material/Lock";
 import image from "../assets/result.svg";
-
 import { Link, useNavigate } from "react-router-dom";
-import LoginForm from "../components/login/LoginForm";
-import { loginSchema } from "../components/login/LoginSchema";
 
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import useAuthCalls from "../hooks/useAuthCalls";
-import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
 
 const Login = () => {
   const navigate = useNavigate();
-  const { login } = useAuthCalls();
   const { currentUser, error } = useSelector((state) => state?.auth);
-
-  useEffect(() => {
-    if (currentUser) {
-      toastSuccessNotify("Sign-in performed succesfuly");
-      navigate("/stock");
-    }
-  }, [navigate, currentUser]);
-
-  useEffect(() => {
-    error && toastErrorNotify("Sign-in Failed");
-  }, [error]);
 
   return (
     <Container maxWidth="lg">
@@ -69,16 +50,6 @@ const Login = () => {
             Login
           </Typography>
 
-          <Formik
-            initialValues={{ email: "", password: "" }}
-            validationSchema={loginSchema}
-            onSubmit={(values, actions) => {
-              login(values);
-              actions.resetForm();
-              actions.setSubmitting(false);
-            }}
-            component={(props) => <LoginForm {...props} />}
-          ></Formik>
           <Box sx={{ textAlign: "center", mt: 2 }}>
             <Link to="/register">Do you have not an account?</Link>
           </Box>

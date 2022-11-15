@@ -9,6 +9,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import { Formik, Form } from "formik";
+import { TextField } from "@mui/material";
 
 const loginSchema = {};
 
@@ -62,9 +63,21 @@ const Login = () => {
               actions.setSubmitting(false);
             }}
           >
-            {({ values, isSubmitting, handleChage, handleBlur }) => {
-              <Form></Form>;
-            }}
+            {({ values, isSubmitting, handleChange, handleBlur }) => (
+              <Form>
+                <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                  <TextField
+                    label="Email"
+                    name="email"
+                    id="email"
+                    type="email"
+                    variant="outlined"
+                    value={values.email}
+                    onChange={handleChange}
+                  />
+                </Box>
+              </Form>
+            )}
           </Formik>
 
           <Box sx={{ textAlign: "center", mt: 2 }}>

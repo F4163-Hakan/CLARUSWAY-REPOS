@@ -6,7 +6,7 @@ import { Form } from "formik";
 const SignUpForm = ({ values, handleChange, errors, touched, handleBlur }) => {
   return (
     <div>
-      
+
       <Form>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <TextField
@@ -21,6 +21,7 @@ const SignUpForm = ({ values, handleChange, errors, touched, handleBlur }) => {
             helperText={touched.username && errors.username}
             error={touched.username && Boolean(errors.username)}
           />
+          
           <TextField
             label="First Name"
             name="first_name"

@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 
 export const registerSchema = Yup.object().shape({
-  
+
   username: Yup.string()
     .max(10, "username 10 veya daha az karakter olmalıdır")
     .required("Lutfen username kismini bos birakmayiniz"),
@@ -12,6 +12,7 @@ export const registerSchema = Yup.object().shape({
     .max(20, "last name 20 veya daha az karakter olmalıdır")
     .required("Lutfen last name kismini bos birakmayiniz"),
 
+    
   email: Yup.string()
     .email("Lutfen gecerli email adresini giriniz.")
     .required("Lutfen email kismini bos birakmayiniz"),

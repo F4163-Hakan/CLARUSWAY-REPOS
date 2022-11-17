@@ -1,6 +1,7 @@
 import * as Yup from "yup";
 
 export const registerSchema = Yup.object().shape({
+  
   username: Yup.string()
     .max(10, "username 10 veya daha az karakter olmalıdır")
     .required("Lutfen username kismini bos birakmayiniz"),

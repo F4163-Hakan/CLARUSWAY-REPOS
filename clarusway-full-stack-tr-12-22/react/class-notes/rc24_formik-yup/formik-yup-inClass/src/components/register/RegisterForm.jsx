@@ -6,6 +6,7 @@ import { Form } from "formik";
 const SignUpForm = ({ values, handleChange, errors, touched, handleBlur }) => {
   return (
     <div>
+      
       <Form>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
           <TextField

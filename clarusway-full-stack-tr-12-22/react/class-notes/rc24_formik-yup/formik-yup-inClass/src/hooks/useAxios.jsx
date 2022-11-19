@@ -16,6 +16,7 @@ const axiosWithToken = axios.create({
 const useAxios = () => {
   const { token } = useSelector((state) => state.auth);
 
+  
   useEffect(() => {
     axiosWithToken.interceptors.request.use((config) => {
       if (!config.headers["Authorization"]) {

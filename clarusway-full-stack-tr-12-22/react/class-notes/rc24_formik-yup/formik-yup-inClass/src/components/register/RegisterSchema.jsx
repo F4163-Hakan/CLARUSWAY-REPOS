@@ -12,6 +12,7 @@ export const registerSchema = Yup.object().shape({
     .max(20, "last name 20 veya daha az karakter olmalıdır")
     .required("Lutfen last name kismini bos birakmayiniz"),
 
+
     
   email: Yup.string()
     .email("Lutfen gecerli email adresini giriniz.")

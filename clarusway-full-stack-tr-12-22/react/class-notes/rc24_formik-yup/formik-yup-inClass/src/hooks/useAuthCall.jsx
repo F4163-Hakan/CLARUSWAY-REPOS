@@ -7,6 +7,7 @@ import {
 } from "../features/authSlice";
 import { useDispatch } from "react-redux";
 
+
 const BASE_URL = "https://clarusway.pythonanywhere.com/";
 
 const useAuthCall = () => {

@@ -26,8 +26,7 @@ const Contacts = () => {
               <TableCell align="left">Edit</TableCell>
             </TableRow>
           </TableHead>
-
-          <TableBody>
+                    <TableBody>
             <TableRow></TableRow>
           </TableBody>
         </Table>

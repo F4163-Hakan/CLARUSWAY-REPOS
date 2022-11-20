@@ -32,7 +32,6 @@ const Contacts = () => {
           </TableBody>
         </Table>
       </TableContainer>
-
     </div>
   );
 };

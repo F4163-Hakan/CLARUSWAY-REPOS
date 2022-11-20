@@ -28,11 +28,12 @@ const Contacts = () => {
           </TableHead>
 
           <TableBody>
+            
             <TableRow></TableRow>
           </TableBody>
         </Table>
       </TableContainer>
-      
+
     </div>
   );
 };

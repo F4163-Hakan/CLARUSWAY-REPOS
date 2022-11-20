@@ -14,6 +14,7 @@ const Contacts = () => {
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
+      
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>

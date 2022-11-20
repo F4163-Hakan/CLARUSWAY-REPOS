@@ -25,7 +25,6 @@ const News = () => {
               image={item?.urlToImage}
               alt="img"
             />
-            
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
                 {item?.title}
@@ -34,7 +33,6 @@ const News = () => {
                 {item?.content}
               </Typography>
             </CardContent>
-
             <CardActions>
               <Button size="small">Share</Button>
               <Button size="small" href={item?.url} target="_blank">

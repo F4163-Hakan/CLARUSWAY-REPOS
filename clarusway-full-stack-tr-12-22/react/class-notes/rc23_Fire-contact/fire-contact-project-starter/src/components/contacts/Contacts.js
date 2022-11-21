@@ -9,12 +9,10 @@ import {
   Paper,
 } from "@mui/material";
 
-
 const Contacts = () => {
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
-
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
@@ -26,7 +24,8 @@ const Contacts = () => {
               <TableCell align="left">Edit</TableCell>
             </TableRow>
           </TableHead>
-                    <TableBody>
+
+          <TableBody>
             <TableRow></TableRow>
           </TableBody>
         </Table>

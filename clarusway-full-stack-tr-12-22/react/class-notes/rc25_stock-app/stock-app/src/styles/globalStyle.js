@@ -19,8 +19,9 @@ export const flexCenter = {
   gap: 2,
 };
 
-export const flexRow = {
+export const flexColumn = {
   display: "flex",
+  flexDirection: "column",
   justifyContent: "center",
   gap: 1,
 };

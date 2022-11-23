@@ -8,7 +8,6 @@ import {
   fetchFail,
 } from "../features/authSlice";
 
-
 import { useNavigate } from "react-router-dom";
 import { toastErrorNotify, toastSuccessNotify } from "../helper/ToastNotify";
 

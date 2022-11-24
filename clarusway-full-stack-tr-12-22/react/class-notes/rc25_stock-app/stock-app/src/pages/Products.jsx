@@ -15,7 +15,7 @@ import UpgradeIcon from "@mui/icons-material/Upgrade";
 import VerticalAlignBottomIcon from "@mui/icons-material/VerticalAlignBottom";
 
 import { useSelector } from "react-redux";
-import { arrowStyle, btnHoverStyle } from "../styles/globalStyle";
+import { arrowStyle, btnHoverStyle, flexCenter } from "../styles/globalStyle";
 import useSortColumn from "../hooks/useSortColumn";
 import { MultiSelectBox, MultiSelectBoxItem } from "@tremor/react";
 const Products = () => {
@@ -24,6 +24,7 @@ const Products = () => {
   const [open, setOpen] = useState(false);
   const [info, setInfo] = useState({});
   const [selectedBrands, setSelectedBrands] = useState([]);
+  const [selectedProducts, setSelectedProducts] = useState([]);
 
   useEffect(() => {
     getBrands();
@@ -48,6 +49,11 @@ const Products = () => {
   //? durumunda filter bir suzme yapmamis olur.
   const isBrandSelected = (item) =>
     selectedBrands.includes(item.brand) || selectedBrands.length === 0;
+
+  //? products dizisinden secilmis brand'larin product name'lerini bir diziye saklar
+  const filtredProducts = products
+    ?.filter((item) => selectedBrands?.includes(item.brand))
+    .map((item) => item.name);
 
   // //? Siralanacak local state (sutun verilerinin local state hali)
   // const [sortedProducts, setSortedProducts] = useState(products);
@@ -96,8 +102,7 @@ const Products = () => {
       <Button variant="contained" onClick={() => setOpen(true)}>
         New Product
       </Button>
-      <Box>
-        {" "}
+      <Box sx={flexCenter} mt={3}>
         <MultiSelectBox
           handleSelect={(item) => setSelectedBrands(item)}
           placeholder="Select Brand"
@@ -111,15 +116,11 @@ const Products = () => {
           ))}
         </MultiSelectBox>
         <MultiSelectBox
-          handleSelect={(item) => setSelectedBrands(item)}
+          handleSelect={(item) => setSelectedProducts(item)}
           placeholder="Select Product"
         >
-          {brands?.map((item) => (
-            <MultiSelectBoxItem
-              key={item.name}
-              value={item.name}
-              text={item.name}
-            />
+          {filtredProducts?.map((item) => (
+            <MultiSelectBoxItem key={item} value={item} text={item} />
           ))}
         </MultiSelectBox>
       </Box>

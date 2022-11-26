@@ -12,7 +12,6 @@ import { btnHoverStyle, flex } from "../styles/globalStyle";
 const BrandCard = ({ brand, setOpen, setInfo }) => {
   const { deleteBrand } = useStockCalls();
 
-
   return (
     <Card
       elevation={10}

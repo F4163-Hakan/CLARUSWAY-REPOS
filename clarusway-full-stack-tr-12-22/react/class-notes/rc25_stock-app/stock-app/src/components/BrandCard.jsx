@@ -11,7 +11,7 @@ import { btnHoverStyle, flex } from "../styles/globalStyle";
 
 const BrandCard = ({ brand, setOpen, setInfo }) => {
   const { deleteBrand } = useStockCalls();
-  
+
 
   return (
     <Card
@@ -52,5 +52,6 @@ const BrandCard = ({ brand, setOpen, setInfo }) => {
     </Card>
   );
 };
+
 
 export default BrandCard;

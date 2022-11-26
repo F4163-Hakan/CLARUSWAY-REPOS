@@ -8,7 +8,6 @@ import { CardHeader } from "@mui/material";
 import useStockCalls from "../hooks/useStockCalls";
 import { btnHoverStyle, flex } from "../styles/globalStyle";
 
-
 const BrandCard = ({ brand, setOpen, setInfo }) => {
   const { deleteBrand } = useStockCalls();
 

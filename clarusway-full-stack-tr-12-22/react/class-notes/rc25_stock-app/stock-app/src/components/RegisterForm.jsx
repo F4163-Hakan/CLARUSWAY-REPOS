@@ -14,6 +14,7 @@ export const registerSchema = Yup.object().shape({
   last_name: Yup.string()
     .max(20, "last name must have less than 20 chars")
     .required(),
+    
 
   email: Yup.string().email().required(),
   password: Yup.string()

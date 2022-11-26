@@ -53,5 +53,4 @@ const BrandCard = ({ brand, setOpen, setInfo }) => {
   );
 };
 
-
 export default BrandCard;

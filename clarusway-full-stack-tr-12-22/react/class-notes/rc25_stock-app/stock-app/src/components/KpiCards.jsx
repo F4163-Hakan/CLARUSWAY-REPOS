@@ -48,9 +48,17 @@ const KpiCards = () => {
   ];
 
   return (
-    <Grid container justifyContent="center" alignItems="center" spacing={2}>
+    <Grid container justifyContent="center" alignItems="center" spacing={1}>
       {data.map((item) => (
-        <Grid item key={item.title} sx={{ width: "300px" }}>
+        <Grid
+          item
+          key={item.title}
+          xs={12}
+          sm={10}
+          md={6}
+          lg={4}
+          sx={{ minWidth: "250px" }}
+        >
           <Paper sx={{ p: 2 }} elevation={10}>
             <Box sx={{ display: "flex" }}>
               <Avatar
@@ -59,11 +67,13 @@ const KpiCards = () => {
                   height: "4rem",
                   color: item.color,
                   backgroundColor: item.bgColor,
+                  my: "auto",
+                  mx: 2,
                 }}
               >
                 {item.icon}
               </Avatar>
-              <Box sx={{ mx: 4, flexGrow: 1 }}>
+              <Box sx={{ mx: 3 }}>
                 <Typography variant="button">{item.title}</Typography>
                 <Typography variant="h4">{item.metric}</Typography>
               </Box>

@@ -151,30 +151,21 @@ const Products = () => {
                 <TableCell align="center">#</TableCell>
                 <TableCell align="center">Category</TableCell>
                 <TableCell align="center">
-                  <Box
-                    sx={arrowStyle}
-                    onClick={() => handleSort("brand", "text")}
-                  >
+                  <Box sx={arrowStyle} onClick={() => handleSort("brand")}>
                     <div>Brand</div>
                     {columns.brand === 1 && <UpgradeIcon />}
                     {columns.brand !== 1 && <VerticalAlignBottomIcon />}
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                  <Box
-                    sx={arrowStyle}
-                    onClick={() => handleSort("name", "text")}
-                  >
+                  <Box sx={arrowStyle} onClick={() => handleSort("name")}>
                     <div>Name</div>
                     {columns.name === 1 && <UpgradeIcon />}
                     {columns.name !== 1 && <VerticalAlignBottomIcon />}
                   </Box>
                 </TableCell>
                 <TableCell align="center">
-                  <Box
-                    sx={arrowStyle}
-                    onClick={() => handleSort("stock", "number")}
-                  >
+                  <Box sx={arrowStyle} onClick={() => handleSort("stock")}>
                     <div>Stock</div>
                     {columns.stock === 1 && <UpgradeIcon />}
                     {columns.stock !== 1 && <VerticalAlignBottomIcon />}

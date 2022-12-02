@@ -25,6 +25,7 @@ export const registerSchema = Yup.object().shape({
     .matches(/[!,?{}><%&$#£+-.]+/, " Password must have a special char"),
 });
 
+
 const SignUpForm = ({ values, handleChange, errors, touched, handleBlur }) => {
   return (
     <div>

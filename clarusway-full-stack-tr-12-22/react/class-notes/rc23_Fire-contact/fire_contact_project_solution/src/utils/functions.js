@@ -16,8 +16,9 @@ export const AddUser=(info)=>{
         phoneNumber:info.phoneNumber,
         gender:info.gender
     })
-  
+
 }
+
 
 // READ INFO
 export const useFetch=()=>{
@@ -37,7 +38,7 @@ export const useFetch=()=>{
             setContactList(userArray)
             setIsLoading(false)
         })
-       
+
     },[])
     return {isLoading,contactList}
 

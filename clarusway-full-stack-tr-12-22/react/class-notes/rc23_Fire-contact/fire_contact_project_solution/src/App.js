@@ -5,7 +5,6 @@ import {useState} from "react"
 import {AddUser,UpdateUser} from "./utils/functions"
 import { ToastContainer } from "react-toastify";
 
-
 const initialValues={
   username:"",
   phoneNumber:"",
@@ -14,7 +13,7 @@ const initialValues={
 function App() {
   const [info, setInfo] = useState(initialValues)
   const [isAdd,setIsAdd]=useState("ADD")
-
+  
   const handleSubmit=(e)=>{
     e.preventDefault();
     if(info.id){

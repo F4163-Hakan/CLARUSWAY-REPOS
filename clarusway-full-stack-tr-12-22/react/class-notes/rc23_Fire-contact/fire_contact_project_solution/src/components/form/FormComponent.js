@@ -18,12 +18,11 @@ const FormComponent = ({info,setInfo,handleSubmit,isAdd}) => {
   const handleChange=(e)=>{
     e.preventDefault();
     // const name=e.target.name;
-    // const value=e.target.value;
+    // const value=e.target.value; 
     const {name,value}=e.target;
    setInfo({...info,[name]:value})
    console.log(info)
   }
-  
   return (
     <Grid
       textAlign="center"

@@ -9,7 +9,6 @@ const Charts = () => {
   const dataFormatter = (number) =>
     `$${Intl.NumberFormat("us").format(number).toString()}`;
 
-    
   const salesData = sales?.map((item) => ({
     date: item.createds,
     sales: Number(item.price_total),

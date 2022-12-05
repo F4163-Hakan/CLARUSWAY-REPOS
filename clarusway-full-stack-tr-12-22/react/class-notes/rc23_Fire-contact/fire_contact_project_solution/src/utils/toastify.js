@@ -1,7 +1,6 @@
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-
 const Toastify = (msg) => {
   toast.success(msg, {
     position: "top-right",
@@ -14,6 +13,5 @@ const Toastify = (msg) => {
     theme: "light",
   });
 };
-
 
 export default Toastify;

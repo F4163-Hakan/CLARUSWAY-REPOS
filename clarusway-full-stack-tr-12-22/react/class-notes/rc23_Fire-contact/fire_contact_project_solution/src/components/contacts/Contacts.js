@@ -14,7 +14,6 @@ import EditIcon from "@mui/icons-material/Edit";
 
 const Contacts = ({editUser}) => {
   const { isLoading, contactList } = useFetch();
-  
   return (
     <div>
       <h2 className="contact-header">Contacts</h2>
@@ -63,7 +62,7 @@ const Contacts = ({editUser}) => {
                     <TableCell align="center" onClick={()=>editUser(
                       item.id,
                       item.username,
-                      item.phoneNumber,
+                      item.phoneNumber, 
                       item.gender
                     )}>
                       <EditIcon />

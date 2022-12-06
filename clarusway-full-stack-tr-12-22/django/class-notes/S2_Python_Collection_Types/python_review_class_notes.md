@@ -6,7 +6,6 @@
 - Set
 
 
-
 ## List
 
 Lists are mutable sequences, typically used to store collections of items (where the precise degree of similarity will vary by application).

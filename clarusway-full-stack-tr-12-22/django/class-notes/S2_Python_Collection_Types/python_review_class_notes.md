@@ -5,20 +5,21 @@
 - Tuple
 - Set
 
-
 ## List
 
 Lists are mutable sequences, typically used to store collections of items (where the precise degree of similarity will vary by application).
-
 
 ```py
 list3 = ["Apple", 1, 3.5, True, [1, 3], {"Ready": "yes"}]
 ```
 
 ### creating a list:
+
 Lists may be constructed in several ways:
+
 - Using a pair of square brackets to denote the empty list: []
 - Using the type constructor: list() or list(iterable)
+
 ```py
 a = list()
 print(a)
@@ -38,7 +39,7 @@ print(new_list2)
 
 The constructor builds a list whose items are the same and in the same order as iterable’s items.
 
-- list('abc') returns ['a', 'b', 'c'] 
+- list('abc') returns ['a', 'b', 'c']
 - list( (1, 2, 3) ) returns [1, 2, 3]
 
 ### basic operations with list:
@@ -50,7 +51,7 @@ clear()	  # Removes all the elements from the list
 copy()	  # Returns a copy of the list
 ```
 
-- The copy() method in Python returns a copy of the List. We can copy a list to another list using the = operator, however copying a list using = operator means that when we change the new list the copied list will also be changed, if you do not want this behaviour then use the copy() method instead of = operator. 
+- The copy() method in Python returns a copy of the List. We can copy a list to another list using the = operator, however copying a list using = operator means that when we change the new list the copied list will also be changed, if you do not want this behaviour then use the copy() method instead of = operator.
 
 ```py
 list1 = ["a", "b", "c"]
@@ -63,8 +64,8 @@ pop(index)	  # Removes the element at the specified position, assigning the popp
 reverse() # Reverses the order of the list
 ```
 
-
 How to reach a value inside a list:
+
 ```py
 # Reach to the index no 1 inside inner list:
 a = ['ali', 2, [1,2], 7]
@@ -73,6 +74,7 @@ a[2][1]
 ```
 
 How to join two list:
+
 ```py
 list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
@@ -85,12 +87,12 @@ print(list1)
 
 # ['a', 'b', 'c', 1, 2, 3]
 ```
+
 (document list)[https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range]
 (more on list)[https://docs.python.org/3/tutorial/datastructures.html#more-on-lists]
 
-
-
 ## Dictionary
+
 Dictionaries are used to store data values in key:value pairs.
 
 A dictionary is a collection which is ordered, changeable and does not allow duplicates.
@@ -119,8 +121,8 @@ x = thisdict.get("model")
 print(x)
 # Mustang
 
-# If not, then it will return None (if get() is used with only one argument). 
-# Default None can be changed to a worning message: 
+# If not, then it will return None (if get() is used with only one argument).
+# Default None can be changed to a worning message:
 thisdict.get("bran", "There is no such a key!")
 
 
@@ -149,7 +151,7 @@ thisdict["color"] = "red"
 # The pop() method removes the item with the specified key name:
 thisdict.pop("model")
 
-# The popitem() method removes the last inserted item 
+# The popitem() method removes the last inserted item
 thisdict.popitem()
 
 
@@ -179,16 +181,16 @@ update()	# Updates the dictionary with the specified key-value pairs
 
 ```
 
-
 ## Tuples
+
 - Less memory
 - Stable, unchanged values
 - Faster
 
-
 Tuples are immutable sequences, typically used to store collections of heterogeneous data.
 
 Tuples may be constructed in a number of ways:
+
 - Using a pair of parentheses to denote the empty tuple: ()
 - Using a trailing comma for a singleton tuple: "a", or ("a",)
 - Separating items with commas: "a", "b", "c" or ("a", "b", "c")
@@ -215,6 +217,7 @@ print(thistuple[1])
 ```
 
 Python has two built-in methods that you can use on tuples.
+
 ```py
 count()	# Returns the number of times a specified value occurs in a tuple
 index()	# Searches the tuple for a specified value and returns the position of where it was found
@@ -230,8 +233,6 @@ print(tuple3)
 
 # ('a', 'b', 'c', 1, 2, 3)
 ```
-
-
 
 ## Set
 
@@ -302,69 +303,72 @@ a.union(b)
 ## Summary
 
 - List
-   - Intro
-   - Creating List
-      - []
-      - list()
-   - Basic operations with list
-      - append()
-      - insert()
-      - remove()
-      - sort()
-      - len()
-      - pop()
-      - extend()
-      - index()
-      - count()
-      
-   - Accessing Lists
-      - Indexing
-      - Slicing
-      - Negative Indexing & Slicing
+
+  - Intro
+  - Creating List
+    - []
+    - list()
+  - Basic operations with list
+    - append()
+    - insert()
+    - remove()
+    - sort()
+    - len()
+    - pop()
+    - extend()
+    - index()
+    - count()
+  - Accessing Lists
+    - Indexing
+    - Slicing
+    - Negative Indexing & Slicing
 
 - Dictionary
-   - Intro
-   - Creating Dictionary
-      - {}
-      - dict()
 
-   - Basic operations with list
-      - clear()
-      - get()
-      - items()
-      - keys()
-      - pop()
-      - popitem()
-      - update()
+  - Intro
+  - Creating Dictionary
 
-   - Accessing Dictionaries
-      - nested dicts
+    - {}
+    - dict()
 
+  - Basic operations with list
+
+    - clear()
+    - get()
+    - items()
+    - keys()
+    - pop()
+    - popitem()
+    - update()
+
+  - Accessing Dictionaries
+    - nested dicts
 
 - Tuples
 
-    - Intro
-    - Creating Tuples
-      - ()
-      - tuple()
+  - Intro
+  - Creating Tuples
 
-    - Basic operations with tuple
-      - accessings items with indexing
-      - count()
-      - index()
+    - ()
+    - tuple()
+
+  - Basic operations with tuple
+    - accessings items with indexing
+    - count()
+    - index()
 
 - Set
-    - Intro
-    - Creating Sets
-      - {}
-      - set()
-    
-    - Basic operations with tuple
-      - add()
-      - remove()
-      - discard
-      - pop()
-      - intersection()
-      - union()
-      - difference()
-      
+  - Intro
+  - Creating Sets
+
+    - {}
+    - set()
+
+  - Basic operations with tuple
+    - add()
+    - remove()
+    - discard
+    - pop()
+    - intersection()
+    - union()
+    - difference()

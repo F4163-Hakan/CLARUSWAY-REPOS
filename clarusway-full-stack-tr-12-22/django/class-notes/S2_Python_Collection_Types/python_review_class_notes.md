@@ -185,6 +185,7 @@ update()	# Updates the dictionary with the specified key-value pairs
 - Stable, unchanged values
 - Faster
 
+
 Tuples are immutable sequences, typically used to store collections of heterogeneous data.
 
 Tuples may be constructed in a number of ways:

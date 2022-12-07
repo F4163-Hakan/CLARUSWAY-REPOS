@@ -20,6 +20,7 @@ Lists may be constructed in several ways:
 - Using a pair of square brackets to denote the empty list: []
 - Using the type constructor: list() or list(iterable)
 ```py
+
 a = list()
 print(a)
 print(type(a))

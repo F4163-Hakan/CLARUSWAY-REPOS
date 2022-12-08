@@ -36,6 +36,8 @@ print(new_list1)
 print(new_list2)
 ```
 
+
+
 The constructor builds a list whose items are the same and in the same order as iterable’s items.
 
 - list('abc') returns ['a', 'b', 'c'] 

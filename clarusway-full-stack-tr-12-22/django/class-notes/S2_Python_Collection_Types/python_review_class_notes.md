@@ -89,6 +89,7 @@ print(list1)
 
 # ['a', 'b', 'c', 1, 2, 3]
 ```
+
 (document list)[https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range]
 (more on list)[https://docs.python.org/3/tutorial/datastructures.html#more-on-lists]
 

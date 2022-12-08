@@ -58,6 +58,8 @@ copy()	  # Returns a copy of the list
 list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
 
+
+
 count()	  # Returns the number of elements with the specified value
 extend()  # Add the elements of a list (or any iterable), to the end of the current list
 index()	  # Returns the index of the first element with the specified value

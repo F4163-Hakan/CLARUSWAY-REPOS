@@ -36,8 +36,6 @@ print(new_list1)
 print(new_list2)
 ```
 
-
-
 The constructor builds a list whose items are the same and in the same order as iterable’s items.
 
 - list('abc') returns ['a', 'b', 'c'] 
@@ -57,8 +55,6 @@ copy()	  # Returns a copy of the list
 ```py
 list1 = ["a", "b", "c"]
 list2 = [1, 2, 3]
-
-
 
 count()	  # Returns the number of elements with the specified value
 extend()  # Add the elements of a list (or any iterable), to the end of the current list
@@ -89,7 +85,6 @@ print(list1)
 
 # ['a', 'b', 'c', 1, 2, 3]
 ```
-
 (document list)[https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range]
 (more on list)[https://docs.python.org/3/tutorial/datastructures.html#more-on-lists]
 

@@ -70,7 +70,8 @@ print_types(test) """
 # print(person1.job)  # there is connection between classes and insttances
 
 
-
+# "self" parametresini JS'deki "this" ile bağdaştırabilirsiniz.
+# Fark: JS'deki "this" otomatik olarak her yerdedir, ama Python'daki "self" parametre olarak gönderilmelidir.
 
 
 

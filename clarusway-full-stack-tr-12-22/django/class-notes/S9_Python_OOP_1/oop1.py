@@ -30,8 +30,6 @@ print("--------------------------------------")
 # Easier to debug, classes often contain all applicable information to them
 # Secure, protects information through encapsulation """
 
-# nesne tabanlı programlamanın faydaları nelerdir?
-# --->Nesne tabanlı programlama sayesinde programlar daha anlaşılır, düzenli ve bakımı kolay hale gelir. OOP sayesinde, kod tekrar kullanımı ve modüler hale gelir. Bu da programların geliştirilmesini ve bakımını kolaylaştırır. Ayrıca, OOP sayesinde kod paylaşımı ve işbirliği daha kolay hale gelir.
 
 #! Everything in Python is class
 """ # Python >generally class based  vs.  javascript >generally function based
@@ -45,33 +43,68 @@ print_types(test) """
 
 #! defining class:
 
-# "class" keyword for defining
-
-# Class oluştururken isimlendirmede PascalCase yapı kullanılır. (Her kelimenin ilk harfi büyük ve bitişik.)
-
-# Classlardan türetilmiş objelere "instance" denir.
-
-# Class içinde tanımlanmış değişkenlere "attribute veya property", fonksiyonlara "method" denir. Fonksiyonlarda atanmış değişkenlere "argument veya parameter" denir.
-
+""" # "class" keyword for defining
 # There is a convention among languages that the class name should be capitalized.
 
+class Person:
+    name = "victor"  # class attrinutes/properties
+    age = 33
 
-# class Person:
-#     name = "victor"  # class attrinutes/properties
-#     age = 33
+person1 = Person()  # creating object or instance
+person2 = Person()
 
-# person1 = Person()  # creating object or instance
-# person2 = Person()
+print(person1.name) # instances inherites class atributes
+print(person2.age)
 
-# print(person1.name) # instances inherites class atributes
-# print(person2.age)
+Person.job = "developer"
+print(person1.job)  # there is connection between classes and insttances """
 
-# Person.job = "developer"
-# print(person1.job)  # there is connection between classes and insttances
+#! class attributes vs instance attributes:
+
+class Person:
+    company = "clarusway"
+
+person1 = Person()
+person2 = Person()
 
 
-# "self" parametresini JS'deki "this" ile bağdaştırabilirsiniz.
-# Fark: JS'deki "this" otomatik olarak her yerdedir, ama Python'daki "self" parametre olarak gönderilmelidir.
+# Class attributes should contain information that does not change according to instances.
+# The information that will change according to the instances should be defined on the instances.
+
+person1.location = "turkey"
+person1.company = "tesla"
+# print(person1.location)
+print(person1.company)
+print(person2.company)
+
+
+#! special methods (dunder methods)
+
+class Person:
+    company = "clarusway"
+    person_count = 0
+
+    #  automatically runs when the instance is created
+    def __init__(self, name, age, gender="male"):
+        self.name = name
+        self.age = age
+        self.gender = gender
+        Person.person_count = Person.person_count +1
+
+
+
+    def get_details(self):
+        print(f"{self.name} - {self.age} - {self.gender}")
+
+
+person1 = Person("victor", 33)
+person2 = Person("henry", 33)
+
+
+person1.get_details()
+print(Person.person_count)
+# person2 = Person() #we must pass the arg when creating ins.
+
 
 
 

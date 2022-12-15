@@ -47,10 +47,27 @@ print_types(test) """
 
 # "class" keyword for defining
 
-class Person:
-    pass
+# Class oluştururken isimlendirmede PascalCase yapı kullanılır. (Her kelimenin ilk harfi büyük ve bitişik.)
+
+# Classlardan türetilmiş objelere "instance" denir.
+
+# Class içinde tanımlanmış değişkenlere "attribute veya property", fonksiyonlara "method" denir. Fonksiyonlarda atanmış değişkenlere "argument veya parameter" denir.
+
+# There is a convention among languages that the class name should be capitalized.
 
 
+# class Person:
+#     name = "victor"  # class attrinutes/properties
+#     age = 33
+
+# person1 = Person()  # creating object or instance
+# person2 = Person()
+
+# print(person1.name) # instances inherites class atributes
+# print(person2.age)
+
+# Person.job = "developer"
+# print(person1.job)  # there is connection between classes and insttances
 
 
 

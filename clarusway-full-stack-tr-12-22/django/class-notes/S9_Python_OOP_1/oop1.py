@@ -257,7 +257,32 @@ print(liste)
 # Python overloading modelini desteklemez. Bunu, ekstra moduller ile gerçekleştirebilirsiniz.
 # parent'tan gelen yapıyı farklı parametrelerle değiştirebilmemiz. veya methodu birden farklı tanımlayabilmemizdir. Verilen parametlere göre kendisi seçerek kullanır.
 
+#? other topics
 
+
+
+# print(Employee.mro()) #mro: method resolution order
+# print(help(Employee))
+# print(emp1.__dict__)
+
+# print(isinstance(emp1, Employee))
+# print(issubclass(Lang, Person))
+
+# getattr(instance, attribute): returns attribute value of instance
+# setattr: update attribute of instance
+# hasattr: return boolean
+# delattr: delete attribute of instance
+
+# print(getattr(emp1, "name"))
+# x = getattr(emp1, "name")
+# print(x)
+
+setattr(emp1, "name", "qadir")
+print(getattr(emp1, "name"))
+
+print(hasattr(emp1, "name"))
+delattr(emp1, "age")
+print(emp1, "age")
 
 
 print("--------------------------------------")

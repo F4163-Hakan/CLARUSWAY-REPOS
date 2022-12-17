@@ -19,8 +19,7 @@ print("--------------------------------------")
     #? Polymorphism
         #? Overriding methods
 #* Inner class
-#* Overloading an operator (optional)
-#* Abstract base class 
+#* extra subjects
 
 
 #! What is OOP?
@@ -142,7 +141,7 @@ person1 = Person("victor", 33)
 person2 = Person("henry", 33)
  """
 
-# person1.get_details()
+""" # person1.get_details()
 # print(Person.person_count)
 # person2 = Person() #we must pass the arg when creating ins.
 
@@ -151,7 +150,7 @@ person2 = Person("henry", 33)
 
 
 # print(person1)
-# print(person2)
+# print(person2) """
 
 
 
@@ -163,18 +162,18 @@ person2 = Person("henry", 33)
 
 
 #? Encapsulation
- # The princible in which we determine how much of the classes, data and methods can be viewed and how much can be changed by the user.
+"""  # The princible in which we determine how much of the classes, data and methods can be viewed and how much can be changed by the user.
 
  # kullanıcı tarafından sınıfların, verilerin ve metodların ne kadarının görüntülenebileceğini, ne kadarının değiştirilebileceğini belirlendiğimiz yapı
 
 
     # public - private - protected (not in python or js)
     # there is not a complete encapsulation in python
+ """
 
 
 
-
-class Person:
+""" class Person:
     company = "clarusway"
 
     
@@ -200,19 +199,19 @@ print(person1._id)
 
 # print(person1.__number)
 print(person1._Person__number)
-
+ """
 
 
 #? Abstraction
-  # Abstraction is the process of hiding the internal complex details of an application from the outer world. Abstraction is used to describe things in simple terms. It's used to create a boundary between the application and the client programs.  
+"""   # Abstraction is the process of hiding the internal complex details of an application from the outer world. Abstraction is used to describe things in simple terms. It's used to create a boundary between the application and the client programs.  
     # like coffee machine in real life. you dont need to know how it works but you know its functionality
     
     # kullanıcı gereksiz detaylardan ve bilmesine ihtiyaç olmayan yapıdan uzaklaştırarak yormamak - soyutlama
 
 
-liste = [2, 3,5,1,4]
-liste.sort() 
-print(liste) 
+# liste = [2, 3,5,1,4]
+# liste.sort() 
+# print(liste) 
 
 
 # class Update(models.Model):
@@ -225,7 +224,103 @@ print(liste)
 #     pass
         
 # class Answer(Update):
-#     pass
+#     pass """
+
+
+#? Inheritance
+# Inheritance is the procedure in which one class inherits the attributes and methods of another class. The class whose properties and methods are inherited is known as the Parent class.
+#? multiple inheritance
+
+
+
+class Person:
+    company = "clarusway"
+    
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def __str__(self):
+        return f"{self.name}"
+    
+    def get_details(self):
+        print(self.name, self.age)
+        
+class Lang:
+    def __init__(self, langs):
+        self.langs = langs
+    
+    def display_langs(self):
+        print(self.langs)
+
+
+class Employe(Person, Lang):
+    
+    def __init__(self, name, age, path, langs):
+        super().__init__(name, age)
+        Lang.__init__(self, langs)
+        self.path = path
+        
+    def get_details(self):
+        super().get_details()
+        print(self.path)
+
+
+emp1 = Employe("barry", 20, "FS", "Javascript")
+# emp1.get_details()
+# print(emp1.company)
+# emp1.display_langs()
+
+#? Polymorphism
+#* Overriding:
+# Overriding is an object-oriented programming feature that enables a child class to provide different implementation for a method that is already defined and/or implemented in its parent class or one of its parent classes.
+
+#* overloading:
+# Two or more methods have the same name but different numbers of parameters or different types of parameters, or both. These methods are called overloaded methods and this is called method overloading. #! the concept of overloading simply does not apply to python(give parameters None default value - or - multipledispatch package)
+
+
+#? other topics
+
+# print(Employe.mro()) #mro: method resolution order
+# print(help(Employe))
+# print(emp1.__dict__)
+
+# print(isinstance(emp1, Employe))
+# print(issubclass(Lang, Person))
+
+# getattr(instance, attribute) : returns attribute value of instance
+# setattr(instance, attribute, new value) : update attribute of instance
+# hasattr(instance, attribute) : return boolean
+# delattr(instance, attribute) : delete attribute of instance
+
+# print(getattr(emp1, "name"))
+# x = getattr(emp1, "name")
+# print(x)
+
+# setattr(emp1, "name", "qadir")
+# print(getattr(emp1, "name"))
+
+# print(hasattr(emp1, "name"))
+# print(delattr(emp1, "age"))
+# print(emp1.__dict__)
+
+#? inner class
+
+from django.db import models
+
+class Makale(models.Model):
+    name = models.CharField(max_length=50)
+    author = models.CharField(max_length=50)
+    
+    class Meta:
+        ordering = ["name"]
+        verbose_name = "makaleler"
+
+
+
+
+
+
 
 
 

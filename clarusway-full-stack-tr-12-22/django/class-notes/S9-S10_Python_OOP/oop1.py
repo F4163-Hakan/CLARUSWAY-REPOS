@@ -18,8 +18,8 @@ print("--------------------------------------")
         #? Multiple inheritance
     #? Polymorphism
         #? Overriding methods
-#* Inner class
 #* extra subjects
+#* Inner class
 
 
 #! What is OOP?

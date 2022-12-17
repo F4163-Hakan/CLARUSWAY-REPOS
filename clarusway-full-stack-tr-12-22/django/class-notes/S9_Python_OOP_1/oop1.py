@@ -237,10 +237,15 @@ print(liste)
 
 
 
+# Polymorphism, bir programlama dilinde bir nesnenin birden fazla şekilde davranabileceği anlamına gelir. Bu, aynı adı taşıyan farklı metotların veya fonksiyonların, farklı türlerde veriler için farklı şekillerde çalıştırılmasını sağlar.
+
+# Polymorphism, Object Oriented Programming (OOP) yönteminde önemli bir kavramdır ve genellikle inheritance (kalıtım) ile birlikte kullanılır. Örneğin, bir "Kedi" sınıfı oluşturabilir ve bu sınıfın "Miyavla" metodunu tanımlayabiliriz. Daha sonra, "Tekir" sınıfını "Kedi" sınıfından kalıtım alarak oluşturabiliriz. Bu sınıfta, "Miyavla" metodunu yeniden tanımlayabilir ve bu metodun, "Tekir" sınıfı için uygun bir şekilde çalışmasını sağlayabiliriz.
+
+# Polymorphism, bir programın çeşitlilik ve esneklik kazanmasına yardımcı olur ve genellikle kod tekrarını azaltır.
 
 
-
-
+#* Overriding
+# Overriding is an object-oriented programming feature that enables a child class to provide different implementation for a method that is already defined and/or implemented in it's parent class or one of it's parent classes.
 
 
 

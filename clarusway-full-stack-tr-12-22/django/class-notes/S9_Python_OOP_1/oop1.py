@@ -162,6 +162,14 @@ person2 = Person("henry", 33)
     #? Polymorphism
 
 
+#! OOP Principies (4 pillars)
+
+# * encapsulation => izinsiz girişleri ve değiştirmeleri engelleme (python da tam olarak uygulaması yoktur.)
+# * abstraction   => kullanıcın bilmesinin gerek olmayanını gizleme
+# * polymorhism   => overwriting = parent'tan gelen yapı ihtiyacımızı tam karşılamıyorsa update edebilmemiz.
+#* overloading = parent'tan gelen yapıyı farklı parametrelerle değiştirebilmemiz. veya methodu birden farklı tanımlayabilmemizdir. Verilen parametlere göre kendisi seçerek kullanır.
+# * inheritance   => kalıtım. Parent'tan chield'a aktarılması
+
 #? Encapsulation
  # The princible in which we determine how much of the classes, data and methods can be viewed and how much can be changed by the user.
 
@@ -229,14 +237,6 @@ print(liste)
 
 
 
-
-#! OOP Principies (4 pillars)
-
-# * encapsulation => izinsiz girişleri ve değiştirmeleri engelleme (python da tam olarak uygulaması yoktur.)
-# * abstraction   => kullanıcın bilmesinin gerek olmayanını gizleme
-# * polymorhism   => overwriting = parent'tan gelen yapı ihtiyacımızı tam karşılamıyorsa update edebilmemiz.
-#* overloading = parent'tan gelen yapıyı farklı parametrelerle değiştirebilmemiz. veya methodu birden farklı tanımlayabilmemizdir. Verilen parametlere göre kendisi seçerek kullanır.
-# * inheritance   => kalıtım. Parent'tan chield'a aktarılması
 
 
 

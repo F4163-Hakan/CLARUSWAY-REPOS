@@ -35,14 +35,14 @@ print("--------------------------------------")
 def print_types(data):
     for i in data:
         print(i, type(i))
-        
+
 test = [122, "victor", [1, 2, 3], (1,2,3), {1,2,3}, True, lambda x:x]
 
 print_types(test) """
 
 #! defining class:
 
-""" # "class" keyword for defining 
+""" # "class" keyword for defining
 # There is a convention among languages that the class name should be capitalized.
 
 class Person:
@@ -55,19 +55,19 @@ person2 = Person()
 print(person1.name) # instances inherites class atributes
 print(person2.age)
 
-Person.job = "developer" 
+Person.job = "developer"
 print(person1.job)  # there is connection between classes and insttances """
 
 #! class attributes vs instance attributes:
 
 """ class Person:
     company = "clarusway"
-    
+
 person1 = Person()
 person2 = Person()
 
 
-# Class attributes should contain information that does not change according to instances. 
+# Class attributes should contain information that does not change according to instances.
 # The information that will change according to the instances should be defined on the instances.
 
 person1.location = "turkey"
@@ -81,22 +81,22 @@ print(person2.company) """
 
 """ class Person:
     company = "clarusway"
-    
+
     @staticmethod
     def test():
         print("test")
-        
+
     def set_details(self, name, age):
         self.name = name
         self.age = age
-        
+
     def get_details(self):
         print(f"{self.name} - {self.age}")
-    
+
     @staticmethod  # static methodlar self parametresi almazlar
     def salute():
         print("Hi there")
-    
+
 person1 = Person()
 person2 = Person()
 
@@ -117,12 +117,13 @@ person1.salute()
 person2.salute() """
 
 
+
 #! special methods (dunder methods)
 
 """ class Person:
     company = "clarusway"
     person_count = 0
-    
+
     #  automatically runs when the instance is created
     def __init__(self, name, age, gender="male"):
         self.name = name
@@ -132,10 +133,10 @@ person2.salute() """
 
     def __str__(self):
         return f"{self.name} - {self.age}"
-        
+
     def get_details(self):
         print(f"{self.name} - {self.age} - {self.gender}")
-    
+
 
 person1 = Person("victor", 33)
 person2 = Person("henry", 33)
@@ -176,7 +177,7 @@ person2 = Person("henry", 33)
 """ class Person:
     company = "clarusway"
 
-    
+
     #  automatically runs when the instance is created
     def __init__(self, name, age):
         self.name = name
@@ -187,10 +188,10 @@ person2 = Person("henry", 33)
 
     def __str__(self):
         return f"{self.name} - {self.age}"
-        
+
     def get_details(self):
         print(f"{self.name} - {self.age}")
-    
+
 
 person1 = Person("victor", 33)
 print(person1._id)
@@ -203,26 +204,26 @@ print(person1._Person__number)
 
 
 #? Abstraction
-"""   # Abstraction is the process of hiding the internal complex details of an application from the outer world. Abstraction is used to describe things in simple terms. It's used to create a boundary between the application and the client programs.  
+"""   # Abstraction is the process of hiding the internal complex details of an application from the outer world. Abstraction is used to describe things in simple terms. It's used to create a boundary between the application and the client programs.
     # like coffee machine in real life. you dont need to know how it works but you know its functionality
-    
+
     # kullanıcı gereksiz detaylardan ve bilmesine ihtiyaç olmayan yapıdan uzaklaştırarak yormamak - soyutlama
 
 
 # liste = [2, 3,5,1,4]
-# liste.sort() 
-# print(liste) 
+# liste.sort()
+# print(liste)
 
 
 # class Update(models.Model):
 #     updated = models.DateTimeField("auto_now_true")
-    
+
 #     class Meta:
 #         abstract = True
-        
+
 # class Question(Update):
 #     pass
-        
+
 # class Answer(Update):
 #     pass """
 
@@ -235,32 +236,32 @@ print(person1._Person__number)
 
 class Person:
     company = "clarusway"
-    
+
     def __init__(self, name, age):
         self.name = name
         self.age = age
-        
+
     def __str__(self):
         return f"{self.name}"
-    
+
     def get_details(self):
         print(self.name, self.age)
-        
+
 class Lang:
     def __init__(self, langs):
         self.langs = langs
-    
+
     def display_langs(self):
         print(self.langs)
 
 
 class Employe(Person, Lang):
-    
+
     def __init__(self, name, age, path, langs):
         super().__init__(name, age)
         Lang.__init__(self, langs)
         self.path = path
-        
+
     def get_details(self):
         super().get_details()
         print(self.path)
@@ -311,7 +312,7 @@ from django.db import models
 class Makale(models.Model):
     name = models.CharField(max_length=50)
     author = models.CharField(max_length=50)
-    
+
     class Meta:
         ordering = ["name"]
         verbose_name = "makaleler"

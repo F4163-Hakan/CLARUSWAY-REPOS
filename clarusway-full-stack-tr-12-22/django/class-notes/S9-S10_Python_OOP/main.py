@@ -6,7 +6,6 @@ dracula.take_damage(12)
 print(dracula)
 
 
-
 # ugly_troll = Troll("Pug")
 # print("Ugly troll - {}".format(ugly_troll))
 #

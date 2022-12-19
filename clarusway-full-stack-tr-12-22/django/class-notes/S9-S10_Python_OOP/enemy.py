@@ -10,7 +10,6 @@ class Enemy(object):
         self._lives = lives
         self._alive = True
 
-
     def take_damage(self, damage):
         remaining_points = self._hit_points - damage
         if remaining_points >= 0:

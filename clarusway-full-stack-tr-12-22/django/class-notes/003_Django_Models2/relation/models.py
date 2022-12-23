@@ -22,6 +22,7 @@ on_delete properties:
 '''
 
 
+
 class Address(models.Model):
     name = models.CharField(max_length=20)
     address = models.CharField(max_length=150)

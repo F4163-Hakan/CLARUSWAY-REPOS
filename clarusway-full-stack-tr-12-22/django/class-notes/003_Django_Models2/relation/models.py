@@ -11,6 +11,7 @@ class Profile(models.Model):
         return self.user.username
 
 
+
 '''
 on_delete properties:
     # CASCADE -> if primary deleted, delete foreing too.

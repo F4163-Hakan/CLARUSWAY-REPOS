@@ -11,7 +11,6 @@ class Profile(models.Model):
         return self.user.username
 
 
-
 '''
 on_delete properties:
     # CASCADE -> if primary deleted, delete foreing too.
@@ -20,7 +19,6 @@ on_delete properties:
     # DO_NOTHING -> if primary deleted, do nothing.
     # PROTECT -> if foreign is exist, can not delete primary.
 '''
-
 
 
 class Address(models.Model):

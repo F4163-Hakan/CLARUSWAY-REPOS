@@ -7,8 +7,13 @@ from rest_framework.authtoken.models import Token
 from flight.views import FlightView
 from flight.models import Flight
 
+from datetime import datetime, date
+
 
 class FlightTestCase(APITestCase):
+    now = datetime.now()
+    current_time = now.strftime('%H:%M:%S')
+    today = date.today()
 
     def setUp(self):
         self.factory = APIRequestFactory()
@@ -17,8 +22,8 @@ class FlightTestCase(APITestCase):
             operation_airlines='THY',
             departure_city='Adana',
             arrival_city='Ankara',
-            date_of_departure='2023-01-08',
-            etd='08:35:13',
+            date_of_departure=f'{self.today}',
+            etd=f'{self.current_time}',
         )
         self.user = User.objects.create_user(
             username='admin',
@@ -34,6 +39,7 @@ class FlightTestCase(APITestCase):
         print(response)
         self.assertEqual(response.status_code, 200)
         self.assertNotContains(response, 'reservation')
+        self.assertEqual(len(response.data), 0)
 
     def test_flight_list_as_staff_user(self):
         request = self.factory.get(
@@ -45,3 +51,53 @@ class FlightTestCase(APITestCase):
         response = FlightView.as_view({'get': 'list'})(request)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, 'reservation')
+        self.assertEqual(len(response.data), 1)
+
+    def test_flight_create_as_non_auth_user(self):
+        request = self.factory.post(
+            '/flight/flights/')
+        response = FlightView.as_view({'post': 'create'})(request)
+        self.assertEqual(response.status_code, 401)
+
+    def test_flight_create_as_auth_user(self):
+        request = self.factory.post(
+            '/flight/flights/', HTTP_AUTHORIZATION=f'Token {self.token}')
+
+        # request.user = self.user
+        response = FlightView.as_view({'post': 'create'})(request)
+        self.assertEqual(response.status_code, 403)
+
+    def test_flight_create_as_staff_user(self):
+        data = {
+            "flight_number": "123ABC",
+            "operation_airlines": "THY",
+            "departure_city": "Adana",
+            "arrival_city": "Ankara",
+            "date_of_departure": "2022-01-08",
+            "etd": "16:35:00",
+        }
+        self.user.is_staff = True
+        self.user.save()
+        request = self.factory.post(
+            '/flight/flights/', data, HTTP_AUTHORIZATION=f'Token {self.token}')
+
+        response = FlightView.as_view({'post': 'create'})(request)
+        self.assertEqual(response.status_code, 201)
+
+    # def test_flight_update_as_staff_user(self):
+    #     data = {
+    #         "flight_number": "456ewd",
+    #         "operation_airlines": "THY",
+    #         "departure_city": "Adana",
+    #         "arrival_city": "Ankara",
+    #         "date_of_departure": "2022-01-08",
+    #         "etd": "16:35:00",
+    #     }
+
+    #     self.user.is_staff = True
+    #     self.user.save()
+    #     request = self.factory.put(
+    #         '/flight/flights/1/', data, HTTP_AUTHORIZATION=f'Token {self.token}')
+    #     response = FlightView.as_view({'put': 'update'})(request)
+    #     self.assertEqual(response.status_code, 200)
+    #     self.assertEqual(response.data['flight_number'], "456ewd")

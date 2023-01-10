@@ -81,7 +81,6 @@ class FlightTestCase(APITestCase):
         request = self.factory.post(
             '/flight/flights/', data, HTTP_AUTHORIZATION=f'Token {self.token}')
 
-
         response = FlightView.as_view({'post': 'create'})(request)
         self.assertEqual(response.status_code, 201)
 

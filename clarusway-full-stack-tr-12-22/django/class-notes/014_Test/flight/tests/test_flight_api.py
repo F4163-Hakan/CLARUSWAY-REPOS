@@ -84,20 +84,29 @@ class FlightTestCase(APITestCase):
         response = FlightView.as_view({'post': 'create'})(request)
         self.assertEqual(response.status_code, 201)
 
-    # def test_flight_update_as_staff_user(self):
-    #     data = {
-    #         "flight_number": "456ewd",
-    #         "operation_airlines": "THY",
-    #         "departure_city": "Adana",
-    #         "arrival_city": "Ankara",
-    #         "date_of_departure": "2022-01-08",
-    #         "etd": "16:35:00",
-    #     }
+    def test_flight_update_as_staff_user(self):
+        data = {
+            "flight_number": "456ewd",
+            "operation_airlines": "THY",
+            "departure_city": "Adana",
+            "arrival_city": "Ankara",
+            "date_of_departure": "2022-01-08",
+            "etd": "16:35:00",
+        }
+        print(self.flight.id)
 
-    #     self.user.is_staff = True
-    #     self.user.save()
-    #     request = self.factory.put(
-    #         '/flight/flights/1/', data, HTTP_AUTHORIZATION=f'Token {self.token}')
-    #     response = FlightView.as_view({'put': 'update'})(request)
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertEqual(response.data['flight_number'], "456ewd")
+        self.user.is_staff = True
+        self.user.save()
+        request = self.factory.put(
+            '/flight/flights/1/', data, HTTP_AUTHORIZATION=f'Token {self.token}')
+
+        response = FlightView.as_view(
+            {'put': 'update'})(request, pk='1')
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(Flight.objects.get(id=1).flight_number, '456ewd')
+
+        # self.client.credentials(HTTP_AUTHORIZATION='Token ' + self.token.key)
+        # response = self.client.put(
+        #     '/flight/flights/1/', data, format='json')
+        # self.assertEqual(response.status_code, 200)
+        # self.assertEqual(Flight.objects.get().flight_number, '456ewd')

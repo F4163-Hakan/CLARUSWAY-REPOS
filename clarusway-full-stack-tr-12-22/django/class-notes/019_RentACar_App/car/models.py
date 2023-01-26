@@ -15,3 +15,4 @@ class Car(models.Model):
     availability = models.BooleanField(default=True)
 
     def __str__(self):
+        return f'{self.model} - {self.brand} - {self.plate_number}'

@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 
 
 class Car(models.Model):
@@ -11,7 +12,11 @@ class Car(models.Model):
     model = models.CharField(max_length=20)
     year = models.SmallIntegerField()
     gear = models.CharField(max_length=1, choices=GEAR)
-    rent_per_day = models.SmallIntegerField()
+    rent_per_day = models.DecimalField(
+        max_digits=7,
+        decimal_places=2,
+        validators=[MinValueValidator(1)]
+    )
     availability = models.BooleanField(default=True)
 
     def __str__(self):

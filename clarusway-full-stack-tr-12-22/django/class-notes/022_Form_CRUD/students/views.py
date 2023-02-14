@@ -67,7 +67,36 @@ def student_update(request, id):
     student = get_object_or_404(Student, id=id)
     form = StudentForm(instance=student)
 
+    if request.method == 'POST':
+        form = StudentForm(request.POST, request.FILES, instance=student)
+
+        if form.is_valid():
+            form.save()
+            return redirect('student_list')
+
     context = {
         'form': form
     }
     return render(request, 'students/student_update.html', context)
+
+
+def student_detail(request, id):
+    student = get_object_or_404(Student, id=id)
+    context = {
+        'student': student
+    }
+
+    return render(request, 'students/student_detail.html', context)
+
+
+def student_delete(request, id):
+    student = get_object_or_404(Student, id=id)
+
+    if request.method == 'POST':
+        student.delete()
+        return redirect('student_list')
+
+    context = {
+        'student': student
+    }
+    return render(request, 'students/student_delete.html', context)

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 <h1>ToDo List</h1>
 {% block container %}
-    <a href="/add">Add Todo</a>
+    <a href="/add" class="btn btn-primary">Add Todo</a>
     <table class="table table-bordered table-striped" >
         <thead>
             <tr>
@@ -37,6 +37,11 @@
                 <b class="text-info">{{todo.get_status_display}}</b> 
                 {% endif %}  
                 </td>
+                <td>
+                    <a href="/update/{{ todo.id }}">Update</a>
+                    <a href="/delete/{{ todo.id }}" onclick="return confirm('are you sure?')" >Delete</a>
+                </td>
+                
             </tr>
             {% endfor %}
         </tbody>

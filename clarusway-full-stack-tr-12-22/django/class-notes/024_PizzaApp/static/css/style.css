@@ -2,12 +2,14 @@
     background-color: rgb(209,230,222);
 }
 
+
 .homeImage {
     background-image: url('../images/nadiasgarden.jpg');
     height: calc(100vh - 106px);
     background-size: cover;
     background-position: center;
 }
+
 
 #warning {
     margin-top: 5px;

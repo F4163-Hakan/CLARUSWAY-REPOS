@@ -10,6 +10,8 @@ status_choices=[
     ('p','on progress'),
 ]
 
+
+# Create your models here.
 class Todo(models.Model):
     title=models.CharField(max_length=100)
     description=models.TextField()
@@ -19,4 +21,4 @@ class Todo(models.Model):
     updated_date=models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.title
-
+    

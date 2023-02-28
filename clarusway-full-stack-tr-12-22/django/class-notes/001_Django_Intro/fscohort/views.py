@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def homefs(request):
-    return HttpResponse('Hello FS')
+    return HttpResponse('Hello merhaba FS')

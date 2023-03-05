@@ -57,7 +57,6 @@ class PostView(models.Model):
         return self.user.username
 
 
-
 class Like(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(

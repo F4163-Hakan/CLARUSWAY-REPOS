@@ -103,7 +103,6 @@ class PostUpdate(generics.RetrieveUpdateAPIView):
     def perform_update(self, serializer):
         serializer.save(user=self.request.user)
 
-
     # def partial_update(self, request, *args, **kwargs):
     #     kwargs['partial'] = True
     #     return self.partial_update(request, *args, **kwargs)
@@ -112,7 +111,6 @@ class PostUpdate(generics.RetrieveUpdateAPIView):
     #     response = super().create(request, *args, **kwargs)
     #     response.data = {'messages': "Post updated Succesfully!"}
     #     return response
-
 
 
 """ @api_view(["DELETE"])

@@ -1,4 +1,5 @@
 console.log('app.js is loaded');
+// varialbels
 
 // let firstName = prompt('Enter your name:');
 // alert('firstName :' + firstName);

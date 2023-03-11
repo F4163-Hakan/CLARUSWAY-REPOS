@@ -1,5 +1,6 @@
 import TypoButtons from "../components/TypoButtons";
 
+
 const Home = () => {
   return (
     <>

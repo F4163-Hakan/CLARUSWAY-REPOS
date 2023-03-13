@@ -6,7 +6,6 @@ import Typography from "@mui/material/Typography";
 import LockIcon from "@mui/icons-material/Lock";
 import image from "../assets/result.svg";
 import { Link, useNavigate } from "react-router-dom";
-
 import { useSelector } from "react-redux";
 
 const Login = () => {
@@ -64,5 +63,4 @@ const Login = () => {
     </Container>
   );
 };
-
 export default Login;

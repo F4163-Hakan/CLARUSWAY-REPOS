@@ -6,6 +6,7 @@ const Language = ({ name, img, options }) => {
   const [showImage, setShowImage] = useState(true);
 
   // console.log(name, img, options);
+  
   console.log(showImage);
 
   return (

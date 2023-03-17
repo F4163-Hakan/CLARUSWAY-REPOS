@@ -24,6 +24,7 @@ document.querySelector(".check-btn").addEventListener("click", () => {
   const body = document.querySelector("body");
 
   //? eger input girilmediyse Kullaniciya uyari ver.
+  
   if (!guessInput) {
     msg.innerText = "Please enter a number";
     //! eger rasgele == input.value

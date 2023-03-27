@@ -17,11 +17,13 @@ const fibonacci = (num = 1) => {
   return series[num - 1];
 };
 
-// ! es6 export syntax
+
+// ! es6 export syntax.....................................
 export { calculateTotal, fahrenheitToCelsius, celsiusToFahrenheit, fibonacci };
 export default calculateTotal;
 
-// ! node modules export syntax
+
+// ! node modules export syntax......................................
 // module.exports = {
 //   calculateTotal,
 //   fahrenheitToCelsius,

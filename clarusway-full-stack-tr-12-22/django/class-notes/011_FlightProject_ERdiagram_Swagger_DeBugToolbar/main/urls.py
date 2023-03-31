@@ -2,8 +2,7 @@
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
-    
-Examples:
+    Examples:
 Function views
     1. Add an import:  from my_app import views
     2. Add a URL to urlpatterns:  path('', views.home, name='home')
@@ -35,6 +34,7 @@ schema_view = get_schema_view(
     )
 urlpatterns = [
     path("admin/", admin.site.urls),
+    
     # Url paths for swagger:
     path("swagger(<format>\.json|\.yaml)",schema_view.without_ui(cache_timeout=0), name="schema-json"),
     path("swagger/", schema_view.with_ui("swagger", cache_timeout=0),name="schema-swagger-ui"),

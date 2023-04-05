@@ -24,6 +24,7 @@ const AddTutorial = () => {
             required
           />
         </div>
+
         <div className="mb-3">
           <label htmlFor="desc" className="form-label">
             Description
@@ -38,6 +39,7 @@ const AddTutorial = () => {
             required
           />
         </div>
+        
         <button className="btn btn-danger mb-4">Submit</button>
       </form>
     </div>

@@ -16,8 +16,7 @@ const About = () => {
           <i className="fas fas fa-headset fa-2x"></i>
           <h4>Full-time Mentoring</h4>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Praesentium veniam tempore odio, distinctio neque enim eveniet
+            Lorem, m tempore odio, distinctio neque enim eveniet
             consequatur magnam vero ut. Lorem ipsum dolor, sit amet consectetur
             adipisicing elit. Assumenda sit inventore quae cupiditate, unde
             voluptate.

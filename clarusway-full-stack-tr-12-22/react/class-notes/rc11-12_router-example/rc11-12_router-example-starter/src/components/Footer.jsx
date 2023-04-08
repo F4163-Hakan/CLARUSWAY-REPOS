@@ -3,7 +3,7 @@ function Footer() {
     <div style={{ marginTop: "10rem" }}>
       <nav className="justify-content-center bg-dark p-4 fixed-bottom">
         <p className="text-light text-center">
-          Copyright {new Date().getFullYear()}
+          Copyright by hakanbilgi {new Date().getFullYear()}
         </p>
       </nav>
     </div>

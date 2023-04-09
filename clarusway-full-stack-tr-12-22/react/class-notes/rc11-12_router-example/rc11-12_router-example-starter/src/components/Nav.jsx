@@ -1,6 +1,7 @@
 import logo from "../img/logo.png";
 
 function Nav() {
+
   return (
     <nav className="navbar navbar-expand-md navbar-light">
       <div className="container-fluid">
@@ -17,6 +18,7 @@ function Nav() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 me-3 mb-lg-0">
+            
             <li className="nav-item">
               <a href="/" className="nav-link active" aria-current="page">
                 Home

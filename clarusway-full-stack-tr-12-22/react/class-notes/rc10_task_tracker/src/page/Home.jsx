@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button"
 import axios from "axios";
 
 const Home = () => {
+  
   const [isOpen,setIsOpen]=useState(false)
   const [text,setText]=useState("Show Task Bar")
   const [task,setTask]= useState([]);
@@ -17,6 +18,7 @@ const Home = () => {
   }
 
   // CRUD  -READ--
+
   const getTask=async()=>{
     const {data}=await axios(url)
     setTask(data);
@@ -29,10 +31,10 @@ const Home = () => {
 
   return (
     <div className="mt-4 d-flex justify-content-center flex-column">
-      <Button 
+      <Button
       onClick={()=>{toggle()}}
       variant="danger">{text}</Button>
-      { isOpen && <AddTask getTask={getTask}/>}     
+      { isOpen && <AddTask getTask={getTask}/>}
       <TaskList task={task} getTask={getTask}/>
     </div>
   );

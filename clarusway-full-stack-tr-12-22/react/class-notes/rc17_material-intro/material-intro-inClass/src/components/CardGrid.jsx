@@ -9,6 +9,7 @@ import data from "../data";
 
 export default function CardGrid() {
   return (
+    
     <>
       <Typography variant="h4" color="error" align="center" mt={4} mb={4}>
         CARD And Grid

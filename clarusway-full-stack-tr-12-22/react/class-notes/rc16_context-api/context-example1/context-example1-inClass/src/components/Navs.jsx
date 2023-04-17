@@ -7,6 +7,7 @@ import { useContext } from "react";
 import { LoginContext } from "../context/LoginContext";
 
 function Navs() {
+  
   //! Consuming
   const { user, setUser } = useContext(LoginContext);
 

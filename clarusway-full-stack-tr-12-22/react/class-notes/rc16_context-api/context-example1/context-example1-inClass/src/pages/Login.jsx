@@ -9,6 +9,7 @@ import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   //! local state
+
   // const [user, setUser] = useState({ email: "", password: "" });
 
   //! Consuming LoginContext
@@ -24,6 +25,7 @@ const Login = () => {
   console.log(user);
   return (
     <Container>
+
       <h1 className="text-center mt-4">LOGIN PAGE</h1>
       <Form onSubmit={(e) => handleSubmit(e)}>
         <Form.Group className="mb-3" controlId="username">

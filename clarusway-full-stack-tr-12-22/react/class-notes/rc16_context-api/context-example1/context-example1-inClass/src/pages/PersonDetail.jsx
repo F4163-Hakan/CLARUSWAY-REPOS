@@ -5,6 +5,7 @@ import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 
 const PersonDetail = () => {
+
   const navigate = useNavigate();
 
   const { id } = useParams();
@@ -12,6 +13,7 @@ const PersonDetail = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
+
     fetch(`https://reqres.in/api/users/${id}`)
       .then((res) => {
         if (!res.ok) {
@@ -44,6 +46,7 @@ const PersonDetail = () => {
           alt="img"
         />
         <h4>{person.email}</h4>
+
 
         <Container>
           <Button

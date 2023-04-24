@@ -6,7 +6,6 @@ import Button from "react-bootstrap/Button";
 
 const PersonDetail = () => {
   const navigate = useNavigate();
-
   const { id } = useParams();
   const [person, setPerson] = useState(null);
   const [error, setError] = useState(false);
@@ -23,7 +22,6 @@ const PersonDetail = () => {
       .then((data) => setPerson(data.data))
       .catch((err) => console.log(err));
   }, [id]);
-
   if (error) {
     return <h1>Page Not Found</h1>;
   } else if (!person) {

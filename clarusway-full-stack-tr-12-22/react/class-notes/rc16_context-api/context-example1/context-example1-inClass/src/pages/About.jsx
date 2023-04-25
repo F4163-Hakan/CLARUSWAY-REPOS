@@ -3,6 +3,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const About = () => {
+
   return (
     <Container className="p-3">
       <h1 className="text-center">ABOUT US</h1>

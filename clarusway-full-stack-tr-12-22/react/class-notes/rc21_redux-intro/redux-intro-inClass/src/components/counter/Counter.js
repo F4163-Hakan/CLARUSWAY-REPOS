@@ -6,6 +6,7 @@ const Counter = () => {
   const dispatch = useDispatch();
   // const counter = useSelector((state) => state.counter);
   const { counter } = useSelector((state) => state.count);
+  
   return (
     <div className="app">
       <h2 className="counter-header">Counter With Redux</h2>

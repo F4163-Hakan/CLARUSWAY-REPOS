@@ -13,6 +13,7 @@ const initialState = {
 //? Islemin tamamlanmasi ile gelen veriye gore state'in guncellenemsini saglamak
 //? adina bir arabirim kullanilmaktadir.
 //? Bu arabirim middleware denilir.Redux-Toolkit, default olarak Thunk kullanmaktadir.
+
 //! Thunk'ın amaci reducers'a islenmis sonuclari gondermeden once gecikmeli asenkron ismlerinin yurutulmesini saglamaktir.
 
 export const getNews = createAsyncThunk(

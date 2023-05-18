@@ -7,9 +7,11 @@ import { useSelector } from "react-redux";
 import * as Yup from "yup";
 
 export const loginSchema = Yup.object().shape({
+
   email: Yup.string()
     .email("Please enter valid email")
     .required("Email is mandatory"),
+
   password: Yup.string()
     .min(8, "Password must have min 8 chars")
     .max(16, "Password must have max 16 chars")
@@ -17,10 +19,12 @@ export const loginSchema = Yup.object().shape({
     .matches(/[a-z]+/, "Password must have a lowercase")
     .matches(/[A-Z]+/, "Password must have an uppercase")
     .matches(/[!,?{}><%&$#£+-.]+/, " Password must have a special char"),
+
 });
 
 const LoginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
   const { loading } = useSelector((state) => state.auth);
+  
   return (
     <Form>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>

@@ -17,6 +17,7 @@ import { loginWithGoogle, signup, login } from "../redux/thunks/authThunk";
 import { useSelector } from "react-redux";
 
 const useStyles = makeStyles((theme) => ({
+  
   root: {
     height: "100vh",
     "& .MuiPaper-root": {
@@ -26,6 +27,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: 30,
       maxWidth: "500px",
     },
+    
   },
   image: {
     backgroundImage: "url(https://picsum.photos/1600/900)",

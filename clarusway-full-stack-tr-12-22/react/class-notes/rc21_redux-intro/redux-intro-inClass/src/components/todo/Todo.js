@@ -12,7 +12,7 @@ const Todo = () => {
       <TodoInput />
       <TodoList />
     </div>
-    
+
   );
 };
 

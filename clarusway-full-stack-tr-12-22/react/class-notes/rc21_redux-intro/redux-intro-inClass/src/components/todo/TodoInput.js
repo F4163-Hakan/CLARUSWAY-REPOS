@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../../redux/actions/todoAction";
 
+
 const TodoInput = () => {
   const dispatch = useDispatch();
   const [text, setText] = useState("");
@@ -11,6 +12,7 @@ const TodoInput = () => {
     dispatch(addTodo(text));
     setText("");
   };
+
 
   return (
     <form onSubmit={handleSubmit}>

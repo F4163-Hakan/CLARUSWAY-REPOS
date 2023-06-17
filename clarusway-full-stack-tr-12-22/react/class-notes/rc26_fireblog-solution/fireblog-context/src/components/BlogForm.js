@@ -48,7 +48,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function BlogForm({ newBlog, setNewBlog, newBlogHandler }) {
   const classes = useStyles();
-
   return (
     <Container component="main" maxWidth="xs">
       <CssBaseline />
